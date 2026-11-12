@@ -1,0 +1,700 @@
+/* =========================================================================
+   Ultra 9 Max Smartwatch - High-Converting Facebook Product Landing Page
+   Tailored for Bangladesh F-Commerce & E-Commerce Market
+========================================================================= */
+
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --danger-color: #e11d48;
+  --danger-glow: rgba(225, 29, 72, 0.35);
+  --success-color: #16a34a;
+  --warning-color: #f59e0b;
+  --dark-color: #0f172a;
+  --body-bg: #ffffff;
+  --light-bg: #f8fafc;
+  --card-border: #e2e8f0;
+  --font-bn: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-en: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-bn);
+  background-color: var(--body-bg);
+  color: #334155;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-bn {
+  font-family: var(--font-bn);
+}
+
+.font-en {
+  font-family: var(--font-en);
+}
+
+/* =========================================================================
+   1. Top Urgency & Countdown Bar
+========================================================================= */
+.top-scarcity-bar {
+  background: linear-gradient(90deg, #b91c1c 0%, #dc2626 50%, #ea580c 100%);
+  color: #ffffff;
+  font-size: 0.92rem;
+  z-index: 1020;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pulse-badge {
+  animation: pulse-badge-anim 1.5s infinite;
+}
+
+@keyframes pulse-badge-anim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.time-block {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 2px 6px;
+  text-align: center;
+  min-width: 42px;
+  line-height: 1.1;
+}
+
+.time-block span {
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.time-block small {
+  font-size: 0.65rem;
+  color: #cbd5e1;
+}
+
+.time-colon {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* =========================================================================
+   2. Brand Sub Navigation
+========================================================================= */
+.brand-sub-nav {
+  position: relative;
+  z-index: 1010;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #e11d48, #f59e0b);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.logo-title {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+}
+
+.logo-subtitle {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+  line-height: 1;
+}
+
+.text-primary-custom {
+  color: #e11d48;
+}
+
+.btn-outline-call {
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-call:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.btn-whatsapp-header {
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp-header:hover {
+  background-color: #1eb956;
+  color: #fff;
+}
+
+/* =========================================================================
+   3. Main Product Hero Section & Gallery
+========================================================================= */
+.hero-product-section {
+  background: #ffffff;
+}
+
+.product-gallery-box {
+  position: relative;
+}
+
+.gallery-badges {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge-discount {
+  background: #e11d48;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(225, 29, 72, 0.4);
+}
+
+.badge-stock {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #34d399;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.main-image-container {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--card-border);
+  background-color: #f8fafc;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.main-image-container:hover img {
+  transform: scale(1.03);
+}
+
+.thumbnail-row {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.thumb-item {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-item:hover, .thumb-item.active {
+  border-color: #e11d48;
+  box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.25);
+  transform: translateY(-2px);
+}
+
+.video-teaser-card {
+  background: #f1f5f9;
+  border: 1px dashed #cbd5e1;
+}
+
+.video-play-icon {
+  width: 40px;
+  height: 40px;
+  background: #e11d48;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* =========================================================================
+   4. Product Information & Pricing
+========================================================================= */
+.product-main-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.text-highlight {
+  color: #e11d48;
+  background: linear-gradient(120deg, rgba(225, 29, 72, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.price-container-box {
+  background: #fff1f2;
+  border: 1.5px solid #fecdd3;
+}
+
+.current-price {
+  font-size: 2.2rem;
+  font-family: var(--font-en), var(--font-bn);
+  letter-spacing: -0.5px;
+}
+
+.regular-price {
+  font-family: var(--font-en), var(--font-bn);
+}
+
+.quick-feature {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.feature-icon {
+  font-size: 1.1rem;
+}
+
+/* Pulsing CTA */
+.btn-order-pulse {
+  background: linear-gradient(135deg, #e11d48 0%, #ea580c 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+  transition: all 0.25s ease;
+  animation: pulse-cta-glow 2s infinite;
+  text-decoration: none;
+}
+
+.btn-order-pulse:hover {
+  background: linear-gradient(135deg, #be123c 0%, #c2410c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(225, 29, 72, 0.55);
+  color: #fff;
+}
+
+@keyframes pulse-cta-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(225, 29, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+  }
+}
+
+.btn-call-now {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-call-now:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.btn-whatsapp-direct {
+  background: #25d366;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-whatsapp-direct:hover {
+  background: #1eb956;
+  color: #fff;
+}
+
+.trust-item {
+  flex: 1 1 22%;
+  padding: 0.35rem;
+}
+
+/* =========================================================================
+   5. Special Package Cards (A/B Bundles)
+========================================================================= */
+.package-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.package-card.featured {
+  background: #ffffff;
+  border: 2px solid #e11d48 !important;
+  box-shadow: 0 15px 30px rgba(225, 29, 72, 0.15) !important;
+}
+
+.badge-featured-pkg {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #e11d48, #ea580c);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+}
+
+.package-card.selected {
+  border-color: #e11d48 !important;
+  background-color: #fff1f2;
+}
+
+/* =========================================================================
+   6. Features & Unboxing Box
+========================================================================= */
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+}
+
+.feature-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-purple-subtle { background-color: #f3e8ff; }
+.text-purple { color: #9333ea; }
+
+.box-contents-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.box-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e11d48;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.box-list-row {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Video Overlay Play */
+.video-overlay-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.video-overlay-play:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.play-btn-circle {
+  width: 70px;
+  height: 70px;
+  background: #e11d48;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(225, 29, 72, 0.8);
+  animation: pulse-play-btn 2s infinite;
+}
+
+@keyframes pulse-play-btn {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(0.95); }
+}
+
+/* =========================================================================
+   7. Reviews & Testimonials
+========================================================================= */
+.author-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* =========================================================================
+   8. One-Page Bangladeshi Checkout Form
+========================================================================= */
+.order-form-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.checkout-card {
+  border: 2px solid #e11d48;
+}
+
+.package-radio-label {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.package-radio-label:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.package-radio-label.active {
+  background: #fff1f2;
+  border-color: #e11d48 !important;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.12);
+}
+
+.delivery-radio-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.delivery-radio-card:hover {
+  border-color: #94a3b8;
+}
+
+.delivery-radio-card.active {
+  background: #f0fdf4;
+  border-color: #16a34a !important;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
+}
+
+.btn-confirm-order {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  border: none;
+  box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+  transition: all 0.25s ease;
+  animation: pulse-confirm-btn 2s infinite;
+}
+
+.btn-confirm-order:hover {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.55);
+}
+
+@keyframes pulse-confirm-btn {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Success Modal & WhatsApp Confirmation */
+.success-icon-badge {
+  width: 76px;
+  height: 76px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-whatsapp-confirm {
+  background: #25d366;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp-confirm:hover {
+  background: #1eb956;
+  color: #fff;
+}
+
+/* =========================================================================
+   9. Mobile Sticky Bottom Floating Bar
+========================================================================= */
+.mobile-sticky-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 8px 12px;
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.15);
+  z-index: 1030;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-sticky-order {
+  background: linear-gradient(135deg, #e11d48, #ea580c);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
+}
+
+.btn-sticky-order:hover {
+  color: #fff;
+}
+
+/* =========================================================================
+   10. Live Social Proof Toast Notification (Desktop & Tablet)
+========================================================================= */
+.live-sales-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  z-index: 1025;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 330px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+}
+
+.live-sales-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-img-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f1f5f9;
+}
+
+.toast-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.toast-name {
+  font-size: 0.9rem;
+}
+
+.toast-text {
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.toast-time {
+  font-size: 0.72rem;
+}
+
+/* =========================================================================
+   Responsive Adjustments
+========================================================================= */
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 65px; /* Prevent sticky bottom bar from obscuring content */
+  }
+  .live-sales-toast {
+    display: none; /* Hide on mobile to prevent blocking sticky order bar */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-main-title {
+    font-size: 1.45rem;
+  }
+  .current-price {
+    font-size: 1.85rem;
+  }
+  .checkout-card {
+    padding: 1.25rem !important;
+  }
+}

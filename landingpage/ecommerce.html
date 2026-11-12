@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BazaarX | বাংলাদেশের বিশ্বস্ত অনলাইন শপিং মল - ক্যাশ অন ডেলিভারি</title>
+  <meta name="description" content="BazaarX - বাংলাদেশের সেরা অনলাইন শপিং প্লাটফর্ম। ইলেকট্রনিক্স, ফ্যাশন, গ্যাজেট, হোম অ্যাপ্লায়েন্স সহ লক্ষাধিক পণ্য দ্রুততম ক্যাশ অন ডেলিভারিতে।">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BazaarX - স্মার্ট শপিংয়ের নতুন ঠিকানা">
+  <meta property="og:description" content="সারা দেশে ক্যাশ অন ডেলিভারি, ৭ দিনের রিপ্লেসমেন্ট এবং ১০০% আসল পণ্যের নিশ্চয়তা।">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Hind Siliguri & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/ecommerce.css">
+</head>
+<body>
+
+  <!-- ================= TOP NOTICE BAR ================= -->
+  <div class="top-ticker py-1 text-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between text-small font-bn">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fas fa-truck-fast text-warning me-1"></i> সারা দেশে ৪৮ ঘণ্টার মধ্যে ক্যাশ অন হোম ডেলিভারি!</span>
+        <span class="d-none d-md-inline opacity-50">|</span>
+        <span class="d-none d-md-inline"><i class="fas fa-rotate text-success me-1"></i> ৭ দিনের সহজ রিটার্ন ও এক্সচেঞ্জ</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:01800000000" class="text-white text-decoration-none">
+          <i class="fas fa-headset me-1 text-info"></i> হটলাইন: 01800-000000
+        </a>
+        <span class="opacity-50">|</span>
+        <div class="dropdown">
+          <button class="btn btn-sm text-white py-0 px-1 border-0 dropdown-toggle font-bn" type="button" data-bs-toggle="dropdown">
+            🇧🇩 বাংলা (BDT)
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm small font-bn">
+            <li><a class="dropdown-item active" href="#">বাংলা (BDT ৳)</a></li>
+            <li><a class="dropdown-item" href="#">English (USD $)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="main-header sticky-top bg-white border-bottom shadow-xs">
+    <div class="container py-2 py-lg-3">
+      <div class="row align-items-center g-2 g-md-3">
+        
+        <!-- Logo -->
+        <div class="col-auto d-flex align-items-center gap-2">
+          <button class="btn btn-outline-light border text-dark d-lg-none p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Menu">
+            <i class="fas fa-bars-staggered"></i>
+          </button>
+          <a href="#" class="brand-logo text-decoration-none d-flex align-items-center gap-2">
+            <div class="brand-icon">
+              <i class="fas fa-bag-shopping"></i>
+            </div>
+            <div>
+              <span class="brand-text">Bazaar<span class="brand-x">X</span></span>
+              <span class="brand-sub d-none d-sm-block">SHOPPING BD</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Global Search Bar with Category Filter & Live Autocomplete -->
+        <div class="col">
+          <div class="header-search-wrap position-relative font-bn">
+            <form class="d-flex" id="globalSearchForm">
+              <select class="form-select search-cat-select d-none d-md-block" id="searchCategorySelect">
+                <option value="all" selected>সকল ক্যাটাগরি</option>
+                <option value="gadget">গ্যাজেট ও টেক</option>
+                <option value="fashion">ফ্যাশন ও ক্লোথিং</option>
+                <option value="appliance">হোম অ্যাপ্লায়েন্স</option>
+                <option value="beauty">বিউটি ও কেয়ার</option>
+              </select>
+              <div class="input-group">
+                <input type="text" class="form-control search-input" id="globalSearchInput" placeholder="পণ্য, ব্র্যান্ড বা ক্যাটাগরি খুঁজুন (যেমন: Smart Watch, Jeans, Airpods)..." autocomplete="off">
+                <button class="btn btn-search-submit" type="submit">
+                  <i class="fas fa-magnifying-glass"></i>
+                  <span class="d-none d-sm-inline ms-1 font-bn">খুঁজুন</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Autocomplete Live Dropdown -->
+            <div class="search-autocomplete-box shadow-lg rounded-3 d-none" id="searchAutocomplete">
+              <div class="p-2 border-bottom text-muted small d-flex justify-content-between align-items-center font-bn">
+                <span>জনপ্রিয় অনুসন্ধান</span>
+                <span class="badge bg-danger-subtle text-danger font-bn">ট্রেন্ডিং</span>
+              </div>
+              <ul class="list-unstyled mb-0 font-bn" id="searchSuggestionsList">
+                <!-- Dynamically filled via JS -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Actions (Wishlist, Cart, Account) -->
+        <div class="col-auto d-flex align-items-center gap-2 gap-sm-3 font-bn">
+          
+          <!-- Helpline Icon on Tablet+ -->
+          <a href="https://wa.me/8801800000000" target="_blank" class="action-btn-item d-none d-xl-flex text-decoration-none">
+            <div class="action-icon text-success"><i class="fab fa-whatsapp"></i></div>
+            <div class="action-meta">
+              <small class="text-muted">সাহায্যের জন্য</small>
+              <strong>হোয়াটসঅ্যাপ</strong>
+            </div>
+          </a>
+
+          <!-- Wishlist -->
+          <a href="#wishlist" class="action-icon-btn position-relative text-dark text-decoration-none" id="wishlistTriggerBtn" title="পছন্দের তালিকা">
+            <i class="far fa-heart"></i>
+            <span class="badge-counter" id="wishlistCountBadge">০</span>
+          </a>
+
+          <!-- Cart Drawer Trigger Button -->
+          <button class="btn btn-cart-trigger d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+            <div class="position-relative">
+              <i class="fas fa-cart-shopping fs-5"></i>
+              <span class="badge-counter" id="cartCountBadge">০</span>
+            </div>
+            <div class="text-start d-none d-md-block lh-1">
+              <small class="text-white-50 font-bn" style="font-size: 0.72rem;">কার্ট টোটাল</small>
+              <div class="fw-bold font-monospace" id="cartTotalHeader">৳ ০</div>
+            </div>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category Strip & Quick Nav Bar -->
+    <div class="category-strip border-top d-none d-lg-block bg-white">
+      <div class="container d-flex align-items-center justify-content-between font-bn">
+        
+        <!-- Category Mega Menu Button -->
+        <div class="dropdown">
+          <button class="btn btn-all-categories dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+            <span>সকল ক্যাটাগরি দেখুন</span>
+          </button>
+          <ul class="dropdown-menu mega-category-dropdown shadow-lg border-0 p-2">
+            <li><a class="dropdown-item py-2" href="#gadgets"><i class="fas fa-mobile-screen-button text-primary me-2"></i>স্মার্ট গ্যাজেট ও ইলেকট্রনিক্স</a></li>
+            <li><a class="dropdown-item py-2" href="#fashion"><i class="fas fa-shirt text-danger me-2"></i>মেনস ডেনিম ও ফ্যাশন</a></li>
+            <li><a class="dropdown-item py-2" href="#appliances"><i class="fas fa-tv text-warning me-2"></i>স্মার্ট টিভি ও হোম অ্যাপ্লায়েন্স</a></li>
+            <li><a class="dropdown-item py-2" href="#kitchen"><i class="fas fa-blender text-success me-2"></i>কিচেন ও ডাইনিং এক্সেসরিজ</a></li>
+            <li><a class="dropdown-item py-2" href="#watches"><i class="fas fa-clock text-info me-2"></i>স্মার্টওয়াচ ও প্রিমিয়াম ঘড়ি</a></li>
+            <li><a class="dropdown-item py-2" href="#audio"><i class="fas fa-headphones text-purple me-2"></i>হেডফোন, ইয়ারবাডস ও স্পিকার</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item py-2 fw-bold text-danger" href="#flash-sale"><i class="fas fa-fire me-2"></i>ধামাকা ফ্ল্যাশ সেল (৫০% পর্যন্ত ছাড়)</a></li>
+          </ul>
+        </div>
+
+        <!-- Horizontal Nav Links -->
+        <nav class="nav main-nav-links">
+          <a class="nav-link active" href="#"><i class="fas fa-house me-1"></i>হোম</a>
+          <a class="nav-link text-primary fw-bold" href="products2.html"><i class="fas fa-sparkles me-1 text-warning"></i>মডার্ন প্রোডাক্টস ২.০</a>
+          <a class="nav-link" href="products.html"><i class="fas fa-grid-2 me-1"></i>ক্যাটালগ ফিল্টার</a>
+          <a class="nav-link text-danger fw-bold" href="#flash-sale"><i class="fas fa-bolt me-1"></i>ফ্ল্যাশ ডিলস</a>
+          <a class="nav-link" href="jeans.html" target="_blank"><i class="fas fa-vest me-1 text-primary"></i>ডেনিম ফ্যাশন</a>
+          <a class="nav-link" href="index.html" target="_blank"><i class="fas fa-clock me-1 text-warning"></i>স্মার্টওয়াচ অফার</a>
+        </nav>
+
+        <!-- Right Quick Promo Tag -->
+        <div class="quick-delivery-pill small d-flex align-items-center gap-1">
+          <span class="pulse-dot"></span>
+          <span>ক্যাশ অন ডেলিভারি সাপোর্ট ২৪/৭</span>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO CAROUSEL & SIDE BANNER ================= -->
+  <section class="hero-banner-section py-3 py-lg-4 bg-light">
+    <div class="container">
+      <div class="row g-3">
+        
+        <!-- Left: Dynamic Big Banner Carousel -->
+        <div class="col-lg-8">
+          <div id="heroMainCarousel" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-sm" data-bs-ride="carousel" data-bs-interval="4500">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroMainCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroMainCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroMainCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+              
+              <!-- Slide 1: Smartwatch Combo -->
+              <div class="carousel-item active">
+                <div class="hero-slide-content slide-bg-dark text-white p-4 p-md-5 d-flex align-items-center">
+                  <div class="row align-items-center w-100 g-4">
+                    <div class="col-md-7 font-bn">
+                      <span class="badge bg-danger px-3 py-2 rounded-pill fw-bold mb-2">
+                        <i class="fas fa-fire me-1"></i> মেগা উইকলি ডিল
+                      </span>
+                      <h1 class="display-6 fw-extrabold mb-2">
+                        Ultra 9 Max Smartwatch <br>
+                        <span class="text-warning">৭টি স্ট্র্যাপ সহ মেগা কম্বো!</span>
+                      </h1>
+                      <p class="text-white-50 small mb-3">
+                        ২.২ ইঞ্চি এইচডি AMOLED ডিসপ্লে, ব্লুটুথ কলিং ও দীর্ঘ ব্যাটারি ব্যাকআপ। ৫০% ছাড়ে সীমিত স্টক!
+                      </p>
+                      <div class="d-flex align-items-baseline gap-2 mb-4 font-bn">
+                        <span class="fs-2 fw-bold text-warning font-monospace">৳ ১,৬৯০</span>
+                        <span class="text-white-50 text-decoration-line-through fs-5">৳ ৩,২০০</span>
+                        <span class="badge bg-success small">৫০% ছাড়</span>
+                      </div>
+                      <div class="d-flex flex-wrap gap-2">
+                        <a href="index.html" class="btn btn-warning fw-bold px-4 py-2 font-bn shadow">
+                          <i class="fas fa-bag-shopping me-1"></i> অফারটি দেখুন
+                        </a>
+                        <button class="btn btn-outline-light px-3 py-2 font-bn quick-add-btn" data-id="101" data-title="Ultra 9 Max Smartwatch (7 Straps)" data-price="1690" data-img="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400">
+                          <i class="fas fa-cart-plus me-1"></i> কার্টে রাখুন
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                      <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&auto=format&fit=crop&q=80" alt="Ultra 9 Max Smartwatch" class="img-fluid rounded-4 hero-product-img shadow-lg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Export Denim Jeans -->
+              <div class="carousel-item">
+                <div class="hero-slide-content slide-bg-indigo text-white p-4 p-md-5 d-flex align-items-center">
+                  <div class="row align-items-center w-100 g-4">
+                    <div class="col-md-7 font-bn">
+                      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2">
+                        <i class="fas fa-medal me-1"></i> ১০০% এক্সপোর্ট কোয়ালিটি
+                      </span>
+                      <h2 class="display-6 fw-extrabold mb-2">
+                        ৪-ওয়ে সুপার স্ট্রেচ ডেনিম <br>
+                        <span class="text-info">২ পিস মেগা সেভার কম্বো!</span>
+                      </h2>
+                      <p class="text-white-50 small mb-3">
+                        ১০০% কালার গ্যারান্টি, প্রিমিয়াম বায়ো-এনজাইম ওয়াশ ও সাইজ না মিললে ফ্রি এক্সচেঞ্জ।
+                      </p>
+                      <div class="d-flex align-items-baseline gap-2 mb-4 font-bn">
+                        <span class="fs-2 fw-bold text-warning font-monospace">৳ ১,৭৯০</span>
+                        <span class="text-white-50 text-decoration-line-through fs-5">৳ ৩,৩০০</span>
+                        <span class="badge bg-danger small">প্রতি পিস ৳ ৮৯৫</span>
+                      </div>
+                      <div class="d-flex flex-wrap gap-2">
+                        <a href="jeans.html" class="btn btn-info text-dark fw-bold px-4 py-2 font-bn shadow">
+                          <i class="fas fa-shirt me-1"></i> জিন্স কম্বো অর্ডার করুন
+                        </a>
+                        <button class="btn btn-outline-light px-3 py-2 font-bn quick-add-btn" data-id="201" data-title="৪-ওয়ে স্ট্রেচ জিন্স প্যান্ট (২ পিস কম্বো)" data-price="1790" data-img="https://images.unsplash.com/photo-1542272604-780c96856592?w=400">
+                          <i class="fas fa-cart-plus me-1"></i> কার্টে নিন
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                      <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=500&auto=format&fit=crop&q=80" alt="Stretchable Jeans" class="img-fluid rounded-4 hero-product-img shadow-lg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Wireless Earbuds & Audio -->
+              <div class="carousel-item">
+                <div class="hero-slide-content slide-bg-emerald text-white p-4 p-md-5 d-flex align-items-center">
+                  <div class="row align-items-center w-100 g-4">
+                    <div class="col-md-7 font-bn">
+                      <span class="badge bg-light text-success px-3 py-2 rounded-pill fw-bold mb-2">
+                        <i class="fas fa-headphones me-1"></i> অরিজিনাল সাউন্ড
+                      </span>
+                      <h2 class="display-6 fw-extrabold mb-2">
+                        ANC নয়েজ ক্যানসেলিং <br>
+                        <span class="text-warning">Pro Wireless Earbuds</span>
+                      </h2>
+                      <p class="text-white-50 small mb-3">
+                        ডিপ বেস, গেমিং লো-লেটেন্সি মোড এবং ৪০ ঘণ্টা পর্যন্ত টোটাল ব্যাটারি লাইফ।
+                      </p>
+                      <div class="d-flex align-items-baseline gap-2 mb-4 font-bn">
+                        <span class="fs-2 fw-bold text-warning font-monospace">৳ ১,২৯০</span>
+                        <span class="text-white-50 text-decoration-line-through fs-5">৳ ২,৪০০</span>
+                      </div>
+                      <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-warning fw-bold px-4 py-2 font-bn quick-add-btn" data-id="301" data-title="Pro Wireless ANC Earbuds" data-price="1290" data-img="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400">
+                          <i class="fas fa-bolt me-1"></i> এখনই কিনুন
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                      <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&auto=format&fit=crop&q=80" alt="Wireless Earbuds" class="img-fluid rounded-4 hero-product-img shadow-lg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroMainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroMainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 2 High-Converting Static Promo Tiles -->
+        <div class="col-lg-4">
+          <div class="d-flex flex-column gap-3 h-100">
+            
+            <!-- Promo Tile 1: Leather Belt & Accessories Gift -->
+            <div class="promo-side-tile p-4 rounded-4 text-white d-flex flex-column justify-content-between position-relative overflow-hidden" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); flex: 1;">
+              <div class="position-relative z-1 font-bn">
+                <span class="badge bg-warning text-dark small fw-bold mb-2">ফ্রি উপহার অফার</span>
+                <h4 class="fw-bold mb-1">প্রিমিয়াম জেনুইন লেদার বেল্ট</h4>
+                <p class="text-white-50 small mb-2">যেকোনো ৩টি ডেনিম প্যান্টের সাথে ফ্রি উপহার!</p>
+                <div class="text-warning fw-bold font-monospace fs-5">৳ ০ (সম্পূর্ণ ফ্রি)</div>
+              </div>
+              <div class="mt-2 position-relative z-1">
+                <a href="jeans.html" class="btn btn-sm btn-outline-light font-bn">অফার নিন <i class="fas fa-arrow-right ms-1"></i></a>
+              </div>
+              <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=260&auto=format&fit=crop&q=80" alt="Leather Belt" class="promo-tile-bg-img">
+            </div>
+
+            <!-- Promo Tile 2: Fast Charging & Gadgets -->
+            <div class="promo-side-tile p-4 rounded-4 text-white d-flex flex-column justify-content-between position-relative overflow-hidden" style="background: linear-gradient(135deg, #047857 0%, #065f46 100%); flex: 1;">
+              <div class="position-relative z-1 font-bn">
+                <span class="badge bg-danger small fw-bold mb-2">ফ্ল্যাশ সেল</span>
+                <h4 class="fw-bold mb-1">65W GaN ফাস্ট চার্জার</h4>
+                <p class="text-white-50 small mb-2">ল্যাপটপ ও ফোন একইসাথে দ্রুত চার্জ</p>
+                <div class="text-warning fw-bold font-monospace fs-5">৳ ৯৯০ <span class="text-white-50 fs-6 text-decoration-line-through">৳ ১,৬৫০</span></div>
+              </div>
+              <div class="mt-2 position-relative z-1">
+                <button class="btn btn-sm btn-light font-bn quick-add-btn fw-bold" data-id="302" data-title="65W GaN Fast Charger Combo" data-price="990" data-img="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=260">
+                  কার্টে যোগ করুন
+                </button>
+              </div>
+              <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=260&auto=format&fit=crop&q=80" alt="Charger" class="promo-tile-bg-img">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST BADGES (BANGLADESH E-COMMERCE SEALS) ================= -->
+  <section class="py-3 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="row g-3 text-center font-bn">
+        <div class="col-6 col-md-3">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <div class="trust-icon-box text-primary"><i class="fas fa-hand-holding-dollar fs-4"></i></div>
+            <div class="text-start">
+              <div class="fw-bold text-dark small">ক্যাশ অন ডেলিভারি</div>
+              <div class="text-muted" style="font-size: 0.75rem;">পণ্য দেখে টাকা পরিশোধ করুন</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <div class="trust-icon-box text-success"><i class="fas fa-truck-fast fs-4"></i></div>
+            <div class="text-start">
+              <div class="fw-bold text-dark small">সারা দেশে দ্রুত ডেলিভারি</div>
+              <div class="text-muted" style="font-size: 0.75rem;">২৪ থেকে ৭২ ঘণ্টার মধ্যে ডেলিভারি</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <div class="trust-icon-box text-warning"><i class="fas fa-rotate fs-4"></i></div>
+            <div class="text-start">
+              <div class="fw-bold text-dark small">৭ দিনের ফ্রি রিটার্ন</div>
+              <div class="text-muted" style="font-size: 0.75rem;">পছন্দ না হলে সহজ এক্সচেঞ্জ</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <div class="trust-icon-box text-danger"><i class="fas fa-shield-check fs-4"></i></div>
+            <div class="text-start">
+              <div class="fw-bold text-dark small">১০০% আসল পণ্যের নিশ্চয়তা</div>
+              <div class="text-muted" style="font-size: 0.75rem;">অরিজিনাল ওয়ারেন্টি সাপোর্ট</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POPULAR CATEGORIES CAROUSEL ================= -->
+  <section class="py-4 py-md-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3 font-bn">
+        <div>
+          <h3 class="fw-extrabold text-dark mb-0">জনপ্রিয় ক্যাটাগরি</h3>
+          <p class="text-muted small mb-0">আপনার প্রয়োজনীয় পণ্য সহজে খুঁজে নিন</p>
+        </div>
+        <a href="#featured-products" class="btn btn-sm btn-outline-primary font-bn rounded-pill px-3">
+          সবগুলো দেখুন <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 font-bn">
+        
+        <!-- Category 1 -->
+        <div class="col">
+          <a href="#gadgets" class="category-card p-3 rounded-4 border bg-white text-center text-decoration-none d-block">
+            <div class="cat-img-box mb-2">
+              <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=160&auto=format&fit=crop&q=80" alt="Smartwatches" class="img-fluid rounded-circle">
+            </div>
+            <h6 class="fw-bold text-dark mb-0">স্মার্টওয়াচ</h6>
+            <span class="text-muted small">১২০+ প্রোডাক্ট</span>
+          </a>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="col">
+          <a href="#fashion" class="category-card p-3 rounded-4 border bg-white text-center text-decoration-none d-block">
+            <div class="cat-img-box mb-2">
+              <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=160&auto=format&fit=crop&q=80" alt="Jeans & Fashion" class="img-fluid rounded-circle">
+            </div>
+            <h6 class="fw-bold text-dark mb-0">ডেনিম ও ফ্যাশন</h6>
+            <span class="text-muted small">৩৫০+ কালেকশন</span>
+          </a>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="col">
+          <a href="#audio" class="category-card p-3 rounded-4 border bg-white text-center text-decoration-none d-block">
+            <div class="cat-img-box mb-2">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=160&auto=format&fit=crop&q=80" alt="Earbuds" class="img-fluid rounded-circle">
+            </div>
+            <h6 class="fw-bold text-dark mb-0">ইয়ারবাডস ও সাউন্ড</h6>
+            <span class="text-muted small">৮০+ ভ্যারাইটি</span>
+          </a>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="col">
+          <a href="#appliances" class="category-card p-3 rounded-4 border bg-white text-center text-decoration-none d-block">
+            <div class="cat-img-box mb-2">
+              <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=160&auto=format&fit=crop&q=80" alt="Fast Chargers" class="img-fluid rounded-circle">
+            </div>
+            <h6 class="fw-bold text-dark mb-0">চার্জার ও ক্যাবল</h6>
+            <span class="text-muted small">৯০+ এক্সেসরিজ</span>
+          </a>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="col">
+          <a href="#kitchen" class="category-card p-3 rounded-4 border bg-white text-center text-decoration-none d-block">
+            <div class="cat-img-box mb-2">
+              <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=160&auto=format&fit=crop&q=80" alt="Kitchen Appliances" class="img-fluid rounded-circle">
+            </div>
+            <h6 class="fw-bold text-dark mb-0">হোম ও কিচেন</h6>
+            <span class="text-muted small">১৪০+ আইটেম</span>
+          </a>
+        </div>
+
+        <!-- Category 6 -->
+        <div class="col">
+          <a href="#accessories" class="category-card p-3 rounded-4 border bg-white text-center text-decoration-none d-block">
+            <div class="cat-img-box mb-2">
+              <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=160&auto=format&fit=crop&q=80" alt="Leather Belt" class="img-fluid rounded-circle">
+            </div>
+            <h6 class="fw-bold text-dark mb-0">বেল্ট ও ওয়ালেট</h6>
+            <span class="text-muted small">৬৫+ ডিজাইন</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FLASH SALE SECTION WITH LIVE COUNTDOWN ================= -->
+  <section class="flash-sale-section py-4 py-md-5" id="flash-sale">
+    <div class="container">
+      
+      <!-- Flash Sale Header with Live Timer -->
+      <div class="flash-header-box p-3 p-md-4 rounded-4 text-white mb-4 d-flex flex-wrap align-items-center justify-content-between gap-3 font-bn">
+        <div class="d-flex align-items-center gap-3">
+          <div class="flash-icon-badge">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div>
+            <span class="badge bg-warning text-dark fw-bold mb-1">সীমিত সময়ের ধামাকা</span>
+            <h3 class="fw-extrabold mb-0">আজকের সুপার ফ্ল্যাশ সেল</h3>
+          </div>
+        </div>
+
+        <!-- Countdown Engine -->
+        <div class="d-flex align-items-center gap-2">
+          <span class="small text-white-50 d-none d-sm-inline">অফার শেষ হতে বাকি:</span>
+          <div class="flash-timer-digit" id="flashHours">06</div>
+          <span class="fw-bold">:</span>
+          <div class="flash-timer-digit" id="flashMins">34</div>
+          <span class="fw-bold">:</span>
+          <div class="flash-timer-digit" id="flashSecs">48</div>
+        </div>
+      </div>
+
+      <!-- Flash Sale 4 Cards Grid -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+        <!-- Product 1 (Ultra 9 Watch) -->
+        <div class="col">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৫০%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(101, this)" title="পছন্দের তালিকায় রাখুন"><i class="far fa-heart"></i></button>
+
+            <a href="product-details.html?id=101" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400&auto=format&fit=crop&q=80" alt="Ultra 9 Max Smartwatch" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">গ্যাজেট ও টেক</span>
+              <h6 class="product-title mb-1">
+                <a href="product-details.html?id=101" class="text-dark text-decoration-none">Ultra 9 Max Smartwatch (৭টি স্ট্র্যাপ কম্বো)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted ms-1">(১৮৪০)</span>
+              </div>
+
+              <!-- Price Box -->
+              <div class="d-flex align-items-baseline gap-2 mb-2 font-monospace">
+                <span class="fs-5 fw-bold text-danger">৳ ১,৬৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৩,২০০</span>
+              </div>
+
+              <!-- Stock Meter -->
+              <div class="stock-progress-wrap mb-3">
+                <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.72rem;">
+                  <span>বিক্রি হয়েছে: ৭৪টি</span>
+                  <span class="text-danger fw-bold">বাকি মাত্র ১৮টি</span>
+                </div>
+                <div class="progress" style="height: 6px;">
+                  <div class="progress-bar bg-danger" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <!-- Action Button -->
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="101" data-title="Ultra 9 Max Smartwatch (৭টি স্ট্র্যাপ কম্বো)" data-price="1690" data-img="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 (Jeans Combo) -->
+        <div class="col">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪৫%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(201, this)"><i class="far fa-heart"></i></button>
+
+            <a href="product-details.html?id=201" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=400&auto=format&fit=crop&q=80" alt="Stretchable Jeans" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">মেনস ফ্যাশন</span>
+              <h6 class="product-title mb-1">
+                <a href="product-details.html?id=201" class="text-dark text-decoration-none">৪-ওয়ে সুপার স্ট্রেচ ডেনিম জিন্স (২ পিস কম্বো)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted ms-1">(২৩৫০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-2 font-monospace">
+                <span class="fs-5 fw-bold text-danger">৳ ১,৭৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৩,৩০০</span>
+              </div>
+
+              <div class="stock-progress-wrap mb-3">
+                <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.72rem;">
+                  <span>বিক্রি হয়েছে: ৯২টি</span>
+                  <span class="text-danger fw-bold">বাকি মাত্র ২৩টি</span>
+                </div>
+                <div class="progress" style="height: 6px;">
+                  <div class="progress-bar bg-danger" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="201" data-title="৪-ওয়ে সুপার স্ট্রেচ জিন্স (২ পিস কম্বো)" data-price="1790" data-img="https://images.unsplash.com/photo-1542272604-780c96856592?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 (Wireless ANC Earbuds) -->
+        <div class="col">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪৬%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(301, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(301)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&auto=format&fit=crop&q=80" alt="Wireless Earbuds" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">অডিও ও সাউন্ড</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(301)" class="text-dark text-decoration-none">Pro Wireless ANC Earbuds (৪০ ঘণ্টা ব্যাকআপ)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted ms-1">(৭২০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-2 font-monospace">
+                <span class="fs-5 fw-bold text-danger">৳ ১,২৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ২,৪০০</span>
+              </div>
+
+              <div class="stock-progress-wrap mb-3">
+                <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.72rem;">
+                  <span>বিক্রি হয়েছে: ৪৮টি</span>
+                  <span class="text-danger fw-bold">বাকি মাত্র ১২টি</span>
+                </div>
+                <div class="progress" style="height: 6px;">
+                  <div class="progress-bar bg-danger" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="301" data-title="Pro Wireless ANC Earbuds" data-price="1290" data-img="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 (65W Fast Charger) -->
+        <div class="col">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪০%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(302, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(302)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&auto=format&fit=crop&q=80" alt="Fast Charger" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">চার্জার ও এক্সেসরিজ</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(302)" class="text-dark text-decoration-none">65W GaN ফাস্ট চার্জার কম্বো (ক্যাবল সহ)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted ms-1">(৬৪০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-2 font-monospace">
+                <span class="fs-5 fw-bold text-danger">৳ ৯৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ১,৬৫০</span>
+              </div>
+
+              <div class="stock-progress-wrap mb-3">
+                <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.72rem;">
+                  <span>বিক্রি হয়েছে: ১১৫টি</span>
+                  <span class="text-danger fw-bold">বাকি মাত্র ৯টি</span>
+                </div>
+                <div class="progress" style="height: 6px;">
+                  <div class="progress-bar bg-danger" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="302" data-title="65W GaN ফাস্ট চার্জার কম্বো" data-price="990" data-img="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PRODUCTS TABS WITH FILTER ================= -->
+  <section class="py-4 py-md-5 bg-light" id="featured-products">
+    <div class="container">
+      
+      <!-- Section Title & Filter Tabs -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 font-bn">
+        <div>
+          <h3 class="fw-extrabold text-dark mb-1">জনপ্রিয় ও ট্রেন্ডিং পণ্যসমূহ</h3>
+          <p class="text-muted small mb-0">কাস্টমারদের সবচেয়ে বেশি পছন্দের সেরা কালেকশন</p>
+        </div>
+
+        <ul class="nav nav-pills custom-filter-pills" id="productFilterTabs">
+          <li class="nav-item">
+            <button class="nav-link active" onclick="filterProducts('all', this)">সকল পণ্য</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" onclick="filterProducts('gadgets', this)">গ্যাজেট ও টেক</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" onclick="filterProducts('fashion', this)">ডেনিম ও ফ্যাশন</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" onclick="filterProducts('home', this)">হোম ও কিচেন</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 8 Dynamic Product Grid -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3" id="mainProductsContainer">
+        
+        <!-- P1: Smartwatch -->
+        <div class="col product-item" data-category="gadgets">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৫০%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(101, this)"><i class="far fa-heart"></i></button>
+
+            <a href="index.html" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400&auto=format&fit=crop&q=80" alt="Ultra 9 Max Smartwatch" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">গ্যাজেট ও টেক</span>
+              <h6 class="product-title mb-1">
+                <a href="index.html" class="text-dark text-decoration-none">Ultra 9 Max Smartwatch (৭ স্ট্র্যাপ সেট)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted ms-1">(১৮৪০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ১,৬৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৩,২০০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="101" data-title="Ultra 9 Max Smartwatch (৭ স্ট্র্যাপ সেট)" data-price="1690" data-img="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2: Denim Pant -->
+        <div class="col product-item" data-category="fashion">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪৫%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(201, this)"><i class="far fa-heart"></i></button>
+
+            <a href="jeans.html" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=400&auto=format&fit=crop&q=80" alt="Stretch Jeans" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">ডেনিম ও ফ্যাশন</span>
+              <h6 class="product-title mb-1">
+                <a href="jeans.html" class="text-dark text-decoration-none">৪-ওয়ে সুপার স্ট্রেচেবল জিন্স প্যান্ট (২ পিস)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted ms-1">(২৩৫০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ১,৭৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৩,৩০০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="201" data-title="৪-ওয়ে সুপার স্ট্রেচেবল জিন্স (২ পিস)" data-price="1790" data-img="https://images.unsplash.com/photo-1542272604-780c96856592?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P3: Wireless Earbuds -->
+        <div class="col product-item" data-category="gadgets">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪৬%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(301, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(301)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&auto=format&fit=crop&q=80" alt="Earbuds" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">গ্যাজেট ও টেক</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(301)" class="text-dark text-decoration-none">Pro Wireless ANC Earbuds</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted ms-1">(৭২০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ১,২৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ২,৪০০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="301" data-title="Pro Wireless ANC Earbuds" data-price="1290" data-img="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P4: 65W Fast Charger -->
+        <div class="col product-item" data-category="gadgets">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪০%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(302, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(302)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&auto=format&fit=crop&q=80" alt="Fast Charger" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">গ্যাজেট ও টেক</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(302)" class="text-dark text-decoration-none">65W GaN ফাস্ট চার্জার কম্বো</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted ms-1">(৬৪০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ৯৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ১,৬৫০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="302" data-title="65W GaN ফাস্ট চার্জার কম্বো" data-price="990" data-img="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P5: Leather Belt -->
+        <div class="col product-item" data-category="fashion">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৩৫%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(401, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(401)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=400&auto=format&fit=crop&q=80" alt="Leather Belt" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">ডেনিম ও ফ্যাশন</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(401)" class="text-dark text-decoration-none">প্রিমিয়াম জেনুইন লেদার অটো-লক বেল্ট</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted ms-1">(৯২০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ৭৫০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ১,১৫০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="401" data-title="প্রিমিয়াম জেনুইন লেদার বেল্ট" data-price="750" data-img="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P6: Air Fryer -->
+        <div class="col product-item" data-category="home">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৩০%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(501, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(501)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&auto=format&fit=crop&q=80" alt="Kitchen Appliance" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">হোম ও কিচেন</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(501)" class="text-dark text-decoration-none">স্মার্ট ডিজিটাল এয়ার ফ্রায়ার (৪.৫ লিটার)</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted ms-1">(৪৮০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ৪,৪৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৬,৪০০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="501" data-title="স্মার্ট ডিজিটাল এয়ার ফ্রায়ার" data-price="4490" data-img="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P7: Slim Fit Polo Shirt -->
+        <div class="col product-item" data-category="fashion">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৪০%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(202, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(202)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&auto=format&fit=crop&q=80" alt="Polo Shirt" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">ডেনিম ও ফ্যাশন</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(202)" class="text-dark text-decoration-none">১০০% কম্বড কটন স্লিম-ফিট পোলো শার্ট</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted ms-1">(১১২০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ৫৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৯৯০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="202" data-title="স্লিম-ফিট কটন পোলো শার্ট" data-price="590" data-img="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P8: Smart Water Bottle -->
+        <div class="col product-item" data-category="home">
+          <div class="product-card h-100 p-3 rounded-4 bg-white border position-relative d-flex flex-column font-bn">
+            <span class="product-discount-badge">-৩৫%</span>
+            <button class="btn-wishlist-heart" onclick="toggleWishlist(502, this)"><i class="far fa-heart"></i></button>
+
+            <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(502)" class="product-img-wrap mb-2 text-center d-block">
+              <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&auto=format&fit=crop&q=80" alt="Thermos Bottle" class="img-fluid product-main-thumb">
+            </a>
+
+            <div class="product-meta mt-auto">
+              <span class="product-cat-tag">হোম ও কিচেন</span>
+              <h6 class="product-title mb-1">
+                <a href="#quick-view-modal" data-bs-toggle="modal" onclick="openQuickView(502)" class="text-dark text-decoration-none">এলইডি টেম্পারেচার ডিসপ্লে ভ্যাকুয়াম ফ্লাস্ক</a>
+              </h6>
+              
+              <div class="d-flex align-items-center gap-1 text-warning small mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted ms-1">(৫৯০)</span>
+              </div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-5 fw-bold text-primary">৳ ৪৯০</span>
+                <span class="text-muted text-decoration-line-through small">৳ ৭৫০</span>
+              </div>
+
+              <div class="d-grid gap-1">
+                <button class="btn btn-add-cart w-100 py-2 font-bn quick-add-btn" data-id="502" data-title="এলইডি টেম্পারেচার ফ্লাস্ক বটল" data-price="490" data-img="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BANGLADESH PAYMENT & TRUST SECTION ================= -->
+  <section class="py-4 bg-white border-top border-bottom">
+    <div class="container text-center font-bn">
+      <h6 class="text-muted fw-bold mb-3 small">আমাদের নিরাপদ পেমেন্ট মেথড ও ব্যাংকিং পার্টনারস:</h6>
+      <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+        <span class="payment-chip text-danger"><i class="fas fa-mobile-screen me-1"></i> বিকাশ (bKash)</span>
+        <span class="payment-chip text-warning"><i class="fas fa-wallet me-1"></i> নগদ (Nagad)</span>
+        <span class="payment-chip text-purple"><i class="fas fa-money-bill-transfer me-1"></i> রকেট (Rocket)</span>
+        <span class="payment-chip text-success"><i class="fas fa-hand-holding-dollar me-1"></i> ক্যাশ অন ডেলিভারি (COD)</span>
+        <span class="payment-chip text-primary"><i class="fab fa-cc-visa me-1"></i> ভিসা ও মাস্টারকার্ড</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REAL CUSTOMER TESTIMONIALS ================= -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-4 font-bn">
+        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill small fw-bold mb-2">
+          <i class="fas fa-comment-dots me-1"></i> গ্রাহক অভিজ্ঞতা
+        </span>
+        <h3 class="fw-extrabold text-dark">আমাদের সম্মানিত কাস্টমাররা কী বলছেন</h3>
+        <p class="text-muted small">সারা বাংলাদেশ থেকে BazaarX-এ প্রতিদিন হাজারো কাস্টমার নিরাপদ অনলাইন শপিং করছেন।</p>
+      </div>
+
+      <div class="row g-3 font-bn">
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-xs d-flex flex-column">
+            <div class="text-warning small mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-muted small mb-3">
+              "আমি ৭টি স্ট্র্যাপ ওয়াচ কম্বো অর্ডার করেছিলাম। ২৪ ঘণ্টার মধ্যেই ডেলিভারি পেয়েছি। প্রোডাক্টের মান সত্যিই অসাধারণ। ক্যাশ অন ডেলিভারিতে দেখে টাকা দেওয়াটা খুব ভালো লেগেছে।"
+            </p>
+            <div class="mt-auto d-flex align-items-center gap-2 pt-2 border-top">
+              <div class="avatar-circle bg-primary text-white">ত</div>
+              <div>
+                <h6 class="mb-0 fw-bold text-dark small">তানভীর হাসান</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">উত্তরা, ঢাকা • ভেরিফাইড বায়ার</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-xs d-flex flex-column">
+            <div class="text-warning small mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-muted small mb-3">
+              "ডেনিম জিন্স ২ পিসের কম্বো নিয়েছি। কাপড়ের স্ট্রেচ ও সফটনেস এক কথায় দারুণ! সাইজ নিয়ে সামান্য দ্বিধা ছিল, কিন্তু হেল্পলাইনে কথা বলার পর পারফেক্ট সাইজ পাঠিয়ে দিয়েছেন।"
+            </p>
+            <div class="mt-auto d-flex align-items-center gap-2 pt-2 border-top">
+              <div class="avatar-circle bg-success text-white">স</div>
+              <div>
+                <h6 class="mb-0 fw-bold text-dark small">সাদমান সাকিব</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">জিইসি, চট্টগ্রাম • ভেরিফাইড বায়ার</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 bg-white border h-100 shadow-xs d-flex flex-column">
+            <div class="text-warning small mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-muted small mb-3">
+              "এয়ারবাডসটির সাউন্ড কোয়ালিটি এবং ব্যাটারি ব্যাকআপ প্রিমিয়াম লেভেলের। প্যাকিং অনেক ভালো ছিল এবং ঢাকার বাইরে মাত্র ২ দিনে পেয়েছি। ধন্যবাদ BazaarX টিমকে।"
+            </p>
+            <div class="mt-auto d-flex align-items-center gap-2 pt-2 border-top">
+              <div class="avatar-circle bg-warning text-white">ম</div>
+              <div>
+                <h6 class="mb-0 fw-bold text-dark small">মাহমুদা আক্তার</h6>
+                <small class="text-muted" style="font-size: 0.72rem;">উপশহর, সিলেট • ভেরিফাইড বায়ার</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="main-footer pt-5 pb-4 bg-dark text-white font-bn">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+        <!-- Col 1: About Brand -->
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon">
+              <i class="fas fa-bag-shopping"></i>
+            </div>
+            <span class="brand-text text-white">Bazaar<span class="brand-x">X</span></span>
+          </div>
+          <p class="text-white-50 small mb-3">
+            BazaarX বাংলাদেশের একটি শীর্ষস্থানীয় গ্রাহকবান্ধব ই-কমার্স প্ল্যাটফর্ম। আমরা নিশ্চিত করি ১০০% অরিজিনাল পণ্য, দ্রুততম হোম ডেলিভারি এবং সহজতম ক্যাশ অন ডেলিভারি সেবা।
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Useful Links -->
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">প্রয়োজনীয় লিংক</h6>
+          <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2 mb-0">
+            <li><a href="#flash-sale" class="text-white-50 text-decoration-none">ফ্ল্যাশ সেলস</a></li>
+            <li><a href="index.html" class="text-white-50 text-decoration-none">স্মার্টওয়াচ পেজ</a></li>
+            <li><a href="jeans.html" class="text-white-50 text-decoration-none">ডেনিম জিন্স পেজ</a></li>
+            <li><a href="#order-track-modal" data-bs-toggle="modal" class="text-white-50 text-decoration-none">অর্ডার ট্র্যাকিং</a></li>
+            <li><a href="#terms-modal" data-bs-toggle="modal" class="text-white-50 text-decoration-none">রিটার্ন ও রিফান্ড নীতি</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care -->
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">কাস্টমার কেয়ার</h6>
+          <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2 mb-0">
+            <li><a href="tel:01800000000" class="text-white-50 text-decoration-none">হটলাইন সাপোর্ট</a></li>
+            <li><a href="https://wa.me/8801800000000" class="text-white-50 text-decoration-none">হোয়াটসঅ্যাপ চ্যাট</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">ডেলিভারি চার্জ তালিকা</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">সচরাচর জিজ্ঞাসা (FAQ)</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">প্রাইভেসি পলিসি</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact -->
+        <div class="col-lg-4">
+          <h6 class="text-white fw-bold mb-3">যোগাযোগের ঠিকানা</h6>
+          <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2 mb-3">
+            <li><i class="fas fa-location-dot text-danger me-2"></i> হাউজ ১৮, রোড ৭, সেক্টর ৪, উত্তরা, ঢাকা - ১২৩০</li>
+            <li><i class="fas fa-phone text-success me-2"></i> +880 1800-000000, +880 1700-000000</li>
+            <li><i class="fas fa-envelope text-info me-2"></i> support@bazaarxbd.com</li>
+            <li><i class="fas fa-clock text-warning me-2"></i> প্রতিদিন সকাল ৯:০০ টা - রাত ১১:০০ টা পর্যন্ত</li>
+          </ul>
+          <div class="p-2 rounded-3 bg-secondary bg-opacity-25 small text-white-50">
+            <i class="fas fa-circle-check text-success me-1"></i> সরকারি ভ্যাট ও ট্রেড লাইসেন্স প্রাপ্ত নিবন্ধিত প্রতিষ্ঠান।
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-top border-secondary border-opacity-25 pt-3 d-flex flex-wrap justify-content-between align-items-center small text-white-50">
+        <div>
+          &copy; ২০২৬ BazaarX BD. সর্বস্বত্ব সংরক্ষিত।
+        </div>
+        <div>
+          Designed for High-Converting Bangladesh E-Commerce
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SLIDE-OUT CART OFFCANVAS (THE CHECKOUT ENGINE) ================= -->
+  <div class="offcanvas offcanvas-end font-bn" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom bg-light py-3">
+      <div class="d-flex align-items-center gap-2">
+        <i class="fas fa-cart-shopping text-primary fs-5"></i>
+        <h5 class="offcanvas-title fw-bold text-dark" id="cartOffcanvasLabel">আপনার শপিং কার্ট</h5>
+        <span class="badge bg-primary rounded-pill font-monospace" id="cartDrawerCount">০</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="p-3 bg-warning-subtle border-bottom font-bn">
+      <div class="d-flex justify-content-between small text-dark mb-1">
+        <span id="freeDeliveryText"><i class="fas fa-truck-fast text-primary me-1"></i> আর <strong>৳ ১,০০০</strong> এর কেনাকাটা করলেই <strong>ফ্রি ডেলিভারি!</strong></span>
+      </div>
+      <div class="progress" style="height: 6px;">
+        <div class="progress-bar bg-success" id="freeDeliveryProgressBar" style="width: 40%;"></div>
+      </div>
+    </div>
+
+    <div class="offcanvas-body p-3 d-flex flex-column">
+      
+      <!-- Cart Items List Container -->
+      <div class="cart-items-container flex-grow-1 overflow-auto" id="cartItemsList">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Empty Cart Message -->
+      <div class="empty-cart-state text-center py-5 d-none" id="emptyCartView">
+        <div class="empty-cart-icon mb-3">
+          <i class="fas fa-cart-arrow-down text-muted fs-1"></i>
+        </div>
+        <h5 class="fw-bold text-dark">আপনার কার্ট বর্তমানে খালি!</h5>
+        <p class="text-muted small mb-4">পছন্দের যেকোনো পণ্য কার্টে যোগ করে সহজে অর্ডার করুন।</p>
+        <button class="btn btn-primary font-bn px-4 rounded-pill" data-bs-dismiss="offcanvas">
+          কেনাকাটা শুরু করুন
+        </button>
+      </div>
+
+      <!-- Cart Footer / Quick Checkout -->
+      <div class="cart-drawer-footer border-top pt-3 mt-auto" id="cartFooterSection">
+        
+        <!-- Delivery Area Select -->
+        <div class="mb-3">
+          <label class="form-label small fw-bold text-dark mb-1">ডেলিভারি এলাকা:</label>
+          <div class="d-flex gap-2">
+            <div class="form-check form-check-inline flex-fill border p-2 rounded-3 bg-light m-0">
+              <input class="form-check-input ms-1 me-2" type="radio" name="cartDeliveryArea" id="cartAreaInside" value="70" checked onchange="updateCartCalculations()">
+              <label class="form-check-label small" for="cartAreaInside">ঢাকার ভিতরে (৳৭০)</label>
+            </div>
+            <div class="form-check form-check-inline flex-fill border p-2 rounded-3 bg-light m-0">
+              <input class="form-check-input ms-1 me-2" type="radio" name="cartDeliveryArea" id="cartAreaOutside" value="130" onchange="updateCartCalculations()">
+              <label class="form-check-label small" for="cartAreaOutside">ঢাকার বাইরে (৳১৩০)</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtotal Breakdown -->
+        <div class="d-flex justify-content-between mb-1 small text-muted">
+          <span>সাবটোটাল:</span>
+          <span class="font-monospace fw-bold text-dark" id="cartSubtotalText">৳ ০</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 small text-muted">
+          <span>ডেলিভারি চার্জ:</span>
+          <span class="font-monospace fw-bold text-dark" id="cartDeliveryChargeText">৳ ৭০</span>
+        </div>
+        <div class="d-flex justify-content-between border-top pt-2 mb-3 fs-5">
+          <span class="fw-bold text-dark">সর্বমোট প্রদেয়:</span>
+          <span class="fw-extrabold text-danger font-monospace fs-4" id="cartTotalPayableText">৳ ৭০</span>
+        </div>
+
+        <!-- Checkout Button -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-checkout-fast py-2 fw-bold text-white fs-6 font-bn" onclick="openDirectCheckoutModal()">
+            <i class="fas fa-check-circle me-1"></i> ক্যাশ অন ডেলিভারিতে অর্ডার করুন
+          </button>
+          <button class="btn btn-outline-secondary py-1 small font-bn" data-bs-dismiss="offcanvas">
+            আরও কেনাকাটা করুন
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= DIRECT 1-PAGE EXPRESS CHECKOUT MODAL ================= -->
+  <div class="modal fade font-bn" id="expressCheckoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="modal-header bg-primary text-white py-3">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fas fa-bolt text-warning fs-5"></i>
+            <h5 class="modal-title fw-bold">দ্রুততম ১-পেজ ক্যাশ অন ডেলিভারি চেকআউট</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <form id="expressCheckoutForm" novalidate>
+            <div class="row g-3">
+              
+              <!-- Customer Details -->
+              <div class="col-md-7 border-end-md">
+                <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">
+                  <i class="fas fa-user-check text-primary me-1"></i> আপনার ডেলিভারি তথ্য:
+                </h6>
+
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-dark">আপনার নাম <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="orderCustName" placeholder="যেমন: তানভীর হাসান" required>
+                  <div class="invalid-feedback">অনুগ্রহ করে আপনার নাম দিন।</div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-dark">মোবাইল নম্বর <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light font-monospace fw-bold text-muted">+88</span>
+                    <input type="tel" class="form-control font-monospace" id="orderCustPhone" placeholder="01XXXXXXXXX" maxlength="11" required>
+                  </div>
+                  <div class="invalid-feedback" id="orderPhoneFeedback">সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন।</div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-dark">সম্পূর্ণ ডেলিভারি ঠিকানা <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="orderCustAddress" rows="3" placeholder="গ্রাম/মহল্লা, রোড নং, থানা ও জেলা বিস্তারিত লিখুন" required></textarea>
+                  <div class="invalid-feedback">অনুগ্রহ করে আপনার বিস্তারিত ঠিকানা দিন।</div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-dark">বিশেষ নির্দেশনা (ঐচ্ছিক):</label>
+                  <input type="text" class="form-control" id="orderCustNotes" placeholder="যেমন: অফিস টাইমে কল দিবেন">
+                </div>
+              </div>
+
+              <!-- Order Summary & Confirm -->
+              <div class="col-md-5">
+                <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">
+                  <i class="fas fa-receipt text-success me-1"></i> অর্ডারের বিবরণী:
+                </h6>
+
+                <div class="p-3 rounded-3 bg-light border mb-3">
+                  <div class="small text-muted mb-2" id="checkoutItemsBrief">
+                    <!-- Dynamic mini items list -->
+                  </div>
+                  <div class="d-flex justify-content-between small text-muted mb-1">
+                    <span>আইটেম মোট:</span>
+                    <span class="fw-bold text-dark font-monospace" id="modalSubtotal">৳ ০</span>
+                  </div>
+                  <div class="d-flex justify-content-between small text-muted mb-2">
+                    <span>ডেলিভারি চার্জ:</span>
+                    <span class="fw-bold text-dark font-monospace" id="modalDelivery">৳ ৭০</span>
+                  </div>
+                  <div class="border-top pt-2 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark">মোট প্রদেয়:</span>
+                    <span class="fs-4 fw-extrabold text-danger font-monospace" id="modalTotalPayable">৳ ৭০</span>
+                  </div>
+                </div>
+
+                <div class="p-2 rounded-2 bg-success-subtle text-success small mb-3">
+                  <i class="fas fa-shield-check me-1"></i> ১০০% ক্যাশ অন ডেলিভারি। পণ্য পেয়ে দেখে তারপর ডেলিভারিম্যানকে টাকা দিন।
+                </div>
+
+                <button type="submit" id="btnPlaceOrder" class="btn btn-confirm-checkout w-100 py-3 text-white fw-bold fs-6 shadow">
+                  <i class="fas fa-check-circle me-1"></i> অর্ডার কনফার্ম করুন
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ORDER SUCCESS MODAL WITH INVOICE ================= -->
+  <div class="modal fade font-bn" id="orderSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden text-center">
+        <div class="modal-header bg-success text-white py-3 justify-content-center">
+          <h5 class="modal-title fw-bold">
+            <i class="fas fa-circle-check me-1"></i> আলহামদুলিল্লাহ! অর্ডার সফল হয়েছে 🎉
+          </h5>
+        </div>
+        <div class="modal-body p-4">
+          <div class="order-success-icon mb-3 mx-auto">
+            <i class="fas fa-bag-shopping text-success fs-1"></i>
+          </div>
+          <h4 class="fw-bold text-dark mb-1">ধন্যবাদ <span id="successCustName" class="text-primary"></span>!</h4>
+          <p class="text-muted small mb-3">
+            আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। দ্রুত ডেলিভারি নিশ্চিত করতে আমাদের প্রতিনিধি কল করবেন।
+          </p>
+
+          <div class="p-3 rounded-3 bg-light border text-start small mb-3">
+            <div class="d-flex justify-content-between border-bottom pb-1 mb-2">
+              <span class="text-muted">অর্ডার ট্র্যাকিং আইডি:</span>
+              <strong class="font-monospace text-danger" id="successInvoiceId">BX-829104</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">মোবাইল:</span>
+              <span class="font-monospace fw-bold" id="successCustPhone">017XXXXXXXX</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">ডেলিভারি ঠিকানা:</span>
+              <span class="text-truncate" style="max-width: 180px;" id="successCustAddress">ঢাকা</span>
+            </div>
+            <div class="d-flex justify-content-between border-top pt-2 mt-2 fs-6">
+              <span class="fw-bold text-dark">মোট ক্যাশ অন ডেলিভারি:</span>
+              <span class="fw-bold text-danger fs-5 font-monospace" id="successTotalAmount">৳ ০</span>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2">
+            <a href="#" id="successWhatsAppBtn" target="_blank" class="btn btn-whatsapp-confirm py-2 fw-bold text-white d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-whatsapp fs-5"></i> হোয়াটসঅ্যাপে অর্ডার নিশ্চিত করুন
+            </a>
+            <button type="button" class="btn btn-outline-secondary py-2" data-bs-dismiss="modal">
+              কেনাকাটায় ফিরে যান
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div class="modal fade font-bn" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 text-center">
+              <img id="qvImg" src="" alt="Product" class="img-fluid rounded-4 shadow-sm border max-h-350">
+            </div>
+            <div class="col-md-6">
+              <span class="badge bg-primary-subtle text-primary mb-2" id="qvCategory">গ্যাজেট</span>
+              <h4 class="fw-bold text-dark mb-2" id="qvTitle">পণ্য শিরোনাম</h4>
+              <div class="d-flex align-items-baseline gap-2 mb-3 font-monospace">
+                <span class="fs-3 fw-bold text-danger" id="qvPrice">৳ ০</span>
+                <span class="text-muted text-decoration-line-through fs-5" id="qvOldPrice">৳ ০</span>
+              </div>
+              <p class="text-muted small mb-4" id="qvDesc">পণ্যটির বিস্তারিত বর্ণনা ও ১০০% আসল কোয়ালিটির নিশ্চয়তা।</p>
+              
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="input-group quantity-selector" style="width: 120px;">
+                  <button class="btn btn-outline-secondary btn-sm" type="button" onclick="adjustQvQty(-1)">-</button>
+                  <input type="text" class="form-control text-center font-monospace" id="qvQtyInput" value="1" readonly>
+                  <button class="btn btn-outline-secondary btn-sm" type="button" onclick="adjustQvQty(1)">+</button>
+                </div>
+                <button class="btn btn-primary flex-grow-1 py-2 font-bn" id="qvAddToCartBtn">
+                  <i class="fas fa-cart-shopping me-1"></i> কার্টে যোগ করুন
+                </button>
+              </div>
+
+              <div class="small text-muted border-top pt-2">
+                <div><i class="fas fa-shield-halved text-success me-1"></i> ৭ দিনের রিপ্লেসমেন্ট গ্যারান্টি</div>
+                <div><i class="fas fa-truck text-primary me-1"></i> সারা দেশে হোম ডেলিভারি সুবিধা</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ORDER TRACKING MODAL ================= -->
+  <div class="modal fade font-bn" id="orderTrackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="modal-header bg-dark text-white py-3">
+          <h5 class="modal-title fw-bold">
+            <i class="fas fa-truck-fast me-2 text-warning"></i> আপনার অর্ডার ট্র্যাক করুন
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <p class="text-muted small mb-3">আপনার ইনভয়েস আইডি (যেমন: BX-829104) বা মোবাইল নম্বর দিয়ে সার্চ করুন:</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control font-monospace" id="trackSearchInput" placeholder="BX-XXXXXX বা 017XXXXXXXX">
+            <button class="btn btn-primary font-bn" type="button" onclick="trackOrderLive()">সার্চ করুন</button>
+          </div>
+          <div id="trackResultBox" class="text-start d-none mt-3 p-3 rounded-3 bg-light border small">
+            <!-- Filled via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MOBILE OFFCANVAS NAVIGATION DRAWER ================= -->
+  <div class="offcanvas offcanvas-start font-bn" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header border-bottom bg-light">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-icon">
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+        <span class="brand-text text-dark">Bazaar<span class="brand-x">X</span></span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <div class="p-3 bg-primary text-white">
+        <div class="fw-bold mb-1">স্বাগতম BazaarX-এ!</div>
+        <small class="text-white-50">বাংলাদেশের বিশ্বস্ত অনলাইন শপিং হাব</small>
+      </div>
+
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action py-3 fw-bold text-primary" data-bs-dismiss="offcanvas">
+          <i class="fas fa-house me-2"></i> হোম পেজ
+        </a>
+        <a href="#flash-sale" class="list-group-item list-group-item-action py-3 text-danger fw-bold" data-bs-dismiss="offcanvas">
+          <i class="fas fa-bolt me-2"></i> আজকের ফ্ল্যাশ ডিলস
+        </a>
+        <a href="index.html" class="list-group-item list-group-item-action py-3" target="_blank">
+          <i class="fas fa-clock text-warning me-2"></i> Ultra 9 Smartwatch (ল্যান্ডিং পেজ)
+        </a>
+        <a href="jeans.html" class="list-group-item list-group-item-action py-3" target="_blank">
+          <i class="fas fa-vest text-indigo me-2"></i> ৪-ওয়ে স্ট্রেচ জিন্স (ল্যান্ডিং পেজ)
+        </a>
+        <a href="#featured-products" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+          <i class="fas fa-fire text-danger me-2"></i> জনপ্রিয় পণ্যসমূহ
+        </a>
+        <a href="#orderTrackModal" data-bs-toggle="modal" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+          <i class="fas fa-truck text-success me-2"></i> অর্ডার ট্র্যাক করুন
+        </a>
+      </div>
+
+      <div class="p-3 border-top mt-3 small">
+        <div class="text-muted mb-2">জরুরি প্রয়োজনে সরাসরি যোগাযোগ:</div>
+        <a href="tel:01800000000" class="btn btn-outline-dark btn-sm w-100 mb-2 font-bn">
+          <i class="fas fa-phone me-1"></i> কল করুন: 01800-000000
+        </a>
+        <a href="https://wa.me/8801800000000" target="_blank" class="btn btn-success btn-sm w-100 font-bn">
+          <i class="fab fa-whatsapp me-1"></i> হোয়াটসঅ্যাপে মেসেজ
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MOBILE BOTTOM STICKY BAR ================= -->
+  <div class="mobile-bottom-nav d-lg-none bg-white border-top shadow">
+    <div class="container d-flex justify-content-around py-1 font-bn">
+      <a href="#" class="mobile-nav-link active">
+        <i class="fas fa-house"></i>
+        <span>হোম</span>
+      </a>
+      <a href="#flash-sale" class="mobile-nav-link text-danger">
+        <i class="fas fa-bolt"></i>
+        <span>অফার</span>
+      </a>
+      <button class="mobile-nav-link border-0 bg-transparent position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+        <i class="fas fa-cart-shopping"></i>
+        <span class="mobile-cart-badge" id="mobileBottomCartBadge">০</span>
+        <span>কার্ট</span>
+      </button>
+      <a href="https://wa.me/8801800000000" target="_blank" class="mobile-nav-link text-success">
+        <i class="fab fa-whatsapp"></i>
+        <span>চ্যাট</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Live Sales Popup Toast (Bottom-Left) -->
+  <div class="live-sales-toast shadow" id="homeLiveToast">
+    <div class="toast-img-box">
+      <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=100" alt="Order">
+    </div>
+    <div class="toast-info font-bn">
+      <div class="toast-name fw-bold text-dark" id="toastName">নাজমুল হাসান</div>
+      <div class="toast-text small text-muted" id="toastItem">Ultra 9 Smartwatch অর্ডার করেছেন</div>
+      <div class="toast-time small text-success" id="toastTime">উত্তরা, ঢাকা • ৩ মিনিট আগে</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/ecommerce.js"></script>
+</body>
+</html>
+

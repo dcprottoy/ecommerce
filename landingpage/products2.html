@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BazaarX 2.0 | নেক্সট-জেন আল্ট্রা-মডার্ন প্রোডাক্ট শোকেস</title>
+  <meta name="description" content="BazaarX 2.0 - সম্পূর্ণ নতুন গ্লাস-মরফিজম ও নিও-মডার্ন প্রোডাক্ট কার্ড ডিজাইন, লাইভ কালার সোয়াচ, লাইভ স্টক বার এবং ইন্টারেক্টিভ ফিল্টারিং।">
+
+  <!-- Google Fonts: Hind Siliguri (Bangla) & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/ecommerce.css">
+  <link rel="stylesheet" href="css/products2.css">
+</head>
+<body class="modern-body">
+
+  <!-- ================= TOP NOTICE TICKER ================= -->
+  <div class="top-ticker-v2 py-2 text-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between text-small font-bn">
+      <div class="d-flex align-items-center gap-3">
+        <span class="badge badge-v2-glow"><i class="fas fa-sparkles me-1"></i> BazaarX 2.0</span>
+        <span>সারা দেশে ক্যাশ অন হোম ডেলিভারি ও ৭ দিনের ইনস্ট্যান্ট রিপ্লেসমেন্ট!</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:01800000000" class="text-white text-decoration-none">
+          <i class="fas fa-headset me-1 text-warning"></i> হেল্পলাইন: 01800-000000
+        </a>
+        <span class="opacity-50">|</span>
+        <a href="ecommerce.html" class="text-white text-decoration-none"><i class="fas fa-house me-1"></i> হোম</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ULTRA-MODERN GLASS NAVBAR ================= -->
+  <header class="glass-navbar sticky-top">
+    <div class="container py-2 py-lg-3">
+      <div class="row align-items-center g-2 g-md-3">
+        
+        <!-- Logo -->
+        <div class="col-auto d-flex align-items-center gap-2">
+          <a href="ecommerce.html" class="brand-logo text-decoration-none d-flex align-items-center gap-2">
+            <div class="brand-icon-v2">
+              <i class="fas fa-shapes"></i>
+            </div>
+            <div>
+              <span class="brand-text">Bazaar<span class="brand-x">X</span><sup class="badge-v2-tag">2.0</sup></span>
+              <span class="brand-sub d-none d-sm-block">MODERN APPAREL & TECH</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Center Search Bar with Pill Floating Look -->
+        <div class="col">
+          <div class="search-wrap-v2 position-relative font-bn">
+            <div class="input-group search-pill-group">
+              <span class="input-group-text bg-transparent border-0 ps-3 text-muted"><i class="fas fa-magnifying-glass"></i></span>
+              <input type="text" class="form-control border-0 bg-transparent py-2 search-input-v2" id="v2SearchInput" placeholder="আল্ট্রা-মডার্ন কালেকশন খুঁজুন (Smartwatch, Denim, Earbuds)..." autocomplete="off">
+              <button class="btn btn-v2-filter-clear d-none" id="clearSearchBtn" type="button" onclick="clearSearchInput()"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions (Wishlist & Cart Trigger) -->
+        <div class="col-auto d-flex align-items-center gap-2 font-bn">
+          <a href="https://wa.me/8801800000000" target="_blank" class="btn btn-v2-icon d-none d-sm-flex text-success" title="হোয়াটসঅ্যাপ সাপোর্ট">
+            <i class="fab fa-whatsapp fs-5"></i>
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button class="btn btn-v2-cart d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+            <div class="position-relative">
+              <i class="fas fa-bag-shopping fs-5"></i>
+              <span class="v2-counter-bubble" id="v2CartBubble">০</span>
+            </div>
+            <span class="d-none d-md-inline fw-bold font-monospace" id="v2CartTotalText">৳ ০</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Quick Floating Category Pills Bar -->
+    <div class="sub-filter-strip py-2 border-top">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2 font-bn">
+        <div class="d-flex align-items-center gap-2 overflow-auto category-pills-scroll">
+          <button class="btn btn-cat-v2 active" data-cat="all" onclick="selectQuickCategory('all', this)">
+            <i class="fas fa-border-all me-1"></i> সকল পণ্য
+          </button>
+          <button class="btn btn-cat-v2" data-cat="gadgets" onclick="selectQuickCategory('gadgets', this)">
+            <i class="fas fa-mobile-screen-button me-1"></i> গ্যাজেট ও টেক
+          </button>
+          <button class="btn btn-cat-v2" data-cat="fashion" onclick="selectQuickCategory('fashion', this)">
+            <i class="fas fa-vest me-1"></i> ডেনিম ও ফ্যাশন
+          </button>
+          <button class="btn btn-cat-v2" data-cat="home" onclick="selectQuickCategory('home', this)">
+            <i class="fas fa-blender me-1"></i> হোম ও কিচেন
+          </button>
+          <button class="btn btn-cat-v2" data-cat="audio" onclick="selectQuickCategory('audio', this)">
+            <i class="fas fa-headphones me-1"></i> অডিও ও সাউন্ড
+          </button>
+        </div>
+
+        <div class="small text-muted d-none d-lg-block">
+          প্রদর্শিত হচ্ছে <strong class="text-primary font-monospace" id="v2ProductCount">১২</strong> টি আধুনিক পণ্য
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MODERN HERO SUB-BANNER ================= -->
+  <section class="v2-hero-banner py-4">
+    <div class="container font-bn">
+      <div class="v2-banner-card p-4 p-md-5 rounded-5 text-white position-relative overflow-hidden shadow-lg">
+        <div class="row align-items-center g-4 position-relative z-1">
+          <div class="col-lg-7">
+            <span class="badge badge-v2-glow mb-2"><i class="fas fa-fire me-1"></i> এক্সক্লুসিভ ২০২৬ কালেকশন</span>
+            <h1 class="display-6 fw-extrabold mb-2 text-white">
+              নেক্সট-লেভেল শপিং এক্সপেরিয়েন্স <br>
+              <span class="v2-gradient-text">প্রিমিয়াম কোয়ালিটি ও সেরা ডিল</span>
+            </h1>
+            <p class="text-white-50 mb-4 small max-w-700">
+              সারা দেশে ক্যাশ অন ডেলিভারি, ৭ দিনের ফ্রি সাইজ ও প্রোডাক্ট রিপ্লেসমেন্ট এবং ১০০% আসল পণ্যের নির্ভরযোগ্য নিশ্চয়তা।
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#products-grid-section" class="btn btn-light fw-bold px-4 py-2 rounded-pill font-bn shadow">
+                <i class="fas fa-arrow-down me-1"></i> কালেকশন দেখুন
+              </a>
+              <a href="jeans.html" class="btn btn-outline-light px-3 py-2 rounded-pill font-bn">
+                <i class="fas fa-vest me-1"></i> ডেনিম অফার
+              </a>
+              <a href="index.html" class="btn btn-outline-light px-3 py-2 rounded-pill font-bn">
+                <i class="fas fa-clock me-1"></i> স্মার্টওয়াচ পেজ
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center d-none d-lg-block">
+            <div class="d-flex justify-content-center gap-3">
+              <div class="v2-floating-badge text-start p-3 rounded-4 shadow">
+                <i class="fas fa-truck-fast fs-4 text-warning mb-1"></i>
+                <div class="fw-bold text-white small">ফ্রি হোম ডেলিভারি</div>
+                <small class="text-white-50" style="font-size: 0.7rem;">৩টি আইটেমে ডেলিভারি ফ্রি</small>
+              </div>
+              <div class="v2-floating-badge text-start p-3 rounded-4 shadow mt-4">
+                <i class="fas fa-shield-halved fs-4 text-success mb-1"></i>
+                <div class="fw-bold text-white small">১০০% ভেরিফাইড</div>
+                <small class="text-white-50" style="font-size: 0.7rem;">পণ্য দেখে পেমেন্ট</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN PRODUCTS GRID SECTION ================= -->
+  <main class="py-4 py-lg-5" id="products-grid-section">
+    <div class="container font-bn">
+      
+      <!-- Top Control Bar (Search Info, Sorting & View Toggle) -->
+      <div class="v2-controls-card p-3 rounded-4 bg-white border mb-4 d-flex flex-wrap align-items-center justify-content-between gap-3 shadow-xs">
+        
+        <!-- Filter Pills & Summary -->
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+          <span class="small fw-bold text-muted"><i class="fas fa-sliders text-primary me-1"></i> ফিল্টার:</span>
+          <span class="badge v2-tag-chip" id="v2ActiveCatTag">ক্যাটাগরি: সকল পণ্য</span>
+          <span class="badge v2-tag-chip" id="v2ActivePriceTag">সর্বোচ্চ ৳ ৭,০০০</span>
+          
+          <button class="btn btn-sm btn-link text-danger text-decoration-none p-0 ms-2 small fw-bold" onclick="resetV2Filters()">
+            <i class="fas fa-rotate me-1"></i>রিসেট
+          </button>
+        </div>
+
+        <!-- Sorting & Price Slider Trigger -->
+        <div class="d-flex align-items-center gap-2 ms-auto">
+          <!-- Price Range Dropdown Menu -->
+          <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-pill px-3 font-bn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+              <i class="fas fa-bangladeshi-taka-sign me-1"></i> মূল্য ফিল্টার
+            </button>
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow-lg border-0 rounded-4" style="min-width: 260px;">
+              <h6 class="fw-bold small text-dark mb-2">সর্বোচ্চ বাজেট নির্বাচন করুন:</h6>
+              <div class="d-flex justify-content-between small text-muted font-monospace mb-1">
+                <span>৳ ৩০০</span>
+                <span class="text-primary fw-bold" id="v2SliderPriceDisplay">৳ ৭,০০০</span>
+              </div>
+              <input type="range" class="form-range" id="v2PriceSlider" min="300" max="7000" step="100" value="7000" oninput="handlePriceSlider(this.value)">
+            </div>
+          </div>
+
+          <!-- Sort Select -->
+          <select class="form-select form-select-sm v2-sort-select font-bn rounded-pill" id="v2SortSelect" onchange="filterV2Products()">
+            <option value="featured" selected>জনপ্রিয় অনুযায়ী (Featured)</option>
+            <option value="price-asc">দাম: কম থেকে বেশি ৳</option>
+            <option value="price-desc">দাম: বেশি থেকে কম ৳</option>
+            <option value="rating">সর্বোচ্চ রেটিং প্রাপ্ত ⭐</option>
+            <option value="discount">সর্বোচ্চ ছাড় (-%)</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- Modern Card Grid (3 Columns on Desktop, 2 on Tablet, 1 on Mobile) -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-3 g-4" id="v2ProductsContainer">
+        <!-- Dynamically rendered via js/products2.js with the brand new modern card design -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="p-5 text-center bg-white rounded-5 border d-none" id="v2EmptyState">
+        <div class="mb-3 text-muted">
+          <i class="fas fa-box-open fs-1"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-1">কোনো পণ্য খুঁজে পাওয়া যায়নি!</h4>
+        <p class="text-muted small mb-3">আপনার সার্চ কি-ওয়ার্ড অথবা ফিল্টারের মূল্য পরিসীমা পরিবর্তন করুন।</p>
+        <button class="btn btn-primary px-4 py-2 rounded-pill font-bn" onclick="resetV2Filters()">
+          ফিল্টার রিসেট করুন
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= MODERN SLIDE-OUT CART OFFCANVAS ================= -->
+  <div class="offcanvas offcanvas-end font-bn" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header border-bottom bg-light py-3">
+      <div class="d-flex align-items-center gap-2">
+        <i class="fas fa-bag-shopping text-primary fs-5"></i>
+        <h5 class="offcanvas-title fw-bold text-dark">আপনার শপিং কার্ট</h5>
+        <span class="badge bg-primary rounded-pill font-monospace" id="v2DrawerCount">০</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body p-3 d-flex flex-column">
+      <div class="cart-items-container flex-grow-1 overflow-auto" id="v2CartItemsList"></div>
+
+      <div class="empty-cart-state text-center py-5 d-none" id="v2CartEmpty">
+        <i class="fas fa-cart-arrow-down text-muted fs-1 mb-3"></i>
+        <h6 class="fw-bold text-dark">আপনার কার্ট বর্তমানে খালি!</h6>
+        <p class="text-muted small">যেকোনো পণ্য পছন্দ করে "কার্টে রাখুন" বাটনে ক্লিক করুন।</p>
+      </div>
+
+      <div class="cart-drawer-footer border-top pt-3 mt-auto" id="v2CartFooter">
+        <div class="d-flex justify-content-between mb-1 small text-muted">
+          <span>সাবটোটাল:</span>
+          <span class="font-monospace fw-bold text-dark" id="v2SubtotalText">৳ ০</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 small text-muted">
+          <span>ডেলিভারি চার্জ:</span>
+          <span class="font-monospace fw-bold text-dark" id="v2DelivText">৳ ৭০</span>
+        </div>
+        <div class="d-flex justify-content-between border-top pt-2 mb-3 fs-5">
+          <span class="fw-bold text-dark">সর্বমোট প্রদেয়:</span>
+          <span class="fw-extrabold text-danger font-monospace fs-4" id="v2TotalPayableText">৳ ৭০</span>
+        </div>
+
+        <div class="d-grid gap-2">
+          <a href="product-details.html?id=101" class="btn btn-checkout-fast py-2 fw-bold text-white fs-6 font-bn text-center text-decoration-none">
+            <i class="fas fa-check-circle me-1"></i> ক্যাশ অন ডেলিভারিতে চেকআউট
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODERN TOAST NOTIFICATION ================= -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+    <div id="v2CartToast" class="toast align-items-center text-white bg-dark border-0 rounded-4 shadow-lg font-bn" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex p-2 align-items-center">
+        <div class="toast-body d-flex align-items-center gap-2">
+          <i class="fas fa-circle-check text-success fs-4"></i>
+          <div>
+            <div class="fw-bold" id="v2ToastTitle">পণ্যটি কার্টে যুক্ত হয়েছে!</div>
+            <small class="text-white-50">ক্যাশ অন ডেলিভারিতে চেকআউট করুন</small>
+          </div>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products2.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,614 @@
+/* =========================================================================
+   DenimCraft BD - Premium Jeans Pant Landing Page Stylesheet
+   Designed for High-Converting Facebook Ads in Bangladesh Market
+========================================================================= */
+
+:root {
+  --indigo-primary: #1e3a8a;
+  --indigo-dark: #0f172a;
+  --indigo-vibrant: #2563eb;
+  --copper-gold: #b45309;
+  --danger-color: #dc2626;
+  --success-color: #16a34a;
+  --body-bg: #ffffff;
+  --light-bg: #f8fafc;
+  --border-color: #e2e8f0;
+  --font-bn: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-en: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-bn);
+  background-color: var(--body-bg);
+  color: #334155;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.font-bn { font-family: var(--font-bn); }
+.font-en { font-family: var(--font-en); }
+
+.text-indigo { color: var(--indigo-primary) !important; }
+.bg-indigo { background-color: var(--indigo-primary) !important; }
+.border-indigo { border-color: var(--indigo-primary) !important; }
+
+.bg-indigo-subtle { background-color: #eff6ff !important; }
+.text-indigo-subtle { color: #1e40af !important; }
+.border-indigo-subtle { border-color: #bfdbfe !important; }
+
+.text-indigo-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================================
+   1. Top Scarcity Bar
+========================================================================= */
+.denim-top-bar {
+  background: linear-gradient(90deg, #0f172a 0%, #1e3a8a 60%, #1e40af 100%);
+  color: #ffffff;
+  font-size: 0.92rem;
+  z-index: 1020;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge-flash-sale {
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+  animation: pulse-flash 1.6s infinite;
+}
+
+@keyframes pulse-flash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.timer-unit {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 2px 7px;
+  text-align: center;
+  min-width: 44px;
+  line-height: 1.1;
+}
+
+.timer-unit span {
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.timer-unit small {
+  font-size: 0.65rem;
+  color: #cbd5e1;
+}
+
+.colon {
+  font-weight: bold;
+}
+
+/* =========================================================================
+   2. Brand Navigation
+========================================================================= */
+.denim-logo-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #1e3a8a, #0284c7);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.denim-brand-name {
+  font-family: var(--font-en);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: #0f172a;
+}
+
+.denim-tagline {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.btn-denim-phone {
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn-denim-phone:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.btn-denim-wa {
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-denim-wa:hover {
+  background-color: #1eb956;
+  color: #fff;
+}
+
+/* =========================================================================
+   3. Main Denim Hero Section & Gallery
+========================================================================= */
+.denim-gallery-card {
+  position: relative;
+}
+
+.denim-badges-stack {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge-denim-sale {
+  background: #dc2626;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.4);
+}
+
+.badge-denim-export {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.denim-main-img-box {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  background-color: #f8fafc;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.denim-main-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.denim-main-img-box:hover img {
+  transform: scale(1.03);
+}
+
+.thumbnail-strip {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.color-thumb {
+  width: 74px;
+  flex-shrink: 0;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.color-thumb img {
+  width: 100%;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.color-thumb .color-name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 3px;
+  line-height: 1.1;
+}
+
+.color-thumb:hover img, .color-thumb.active img {
+  border-color: var(--indigo-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.color-thumb.active .color-name {
+  color: var(--indigo-primary);
+  font-weight: 700;
+}
+
+/* =========================================================================
+   4. Title, Price & Quick Size Selector
+========================================================================= */
+.denim-title {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.denim-price-box {
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+}
+
+.current-price {
+  font-size: 2.3rem;
+  font-family: var(--font-en), var(--font-bn);
+}
+
+.regular-price {
+  font-family: var(--font-en), var(--font-bn);
+}
+
+/* Quick Waist Size Pills */
+.size-pills-row {
+  display: flex;
+}
+
+.btn-size-pill {
+  width: 48px;
+  height: 44px;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+  color: #1e293b;
+  font-weight: 700;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-size-pill:hover {
+  border-color: var(--indigo-primary);
+  color: var(--indigo-primary);
+  background: #eff6ff;
+}
+
+.btn-size-pill.active {
+  background: var(--indigo-primary);
+  color: #ffffff;
+  border-color: var(--indigo-primary);
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.35);
+}
+
+.denim-usp-chip {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Pulsing Action CTA */
+.btn-order-denim {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  transition: all 0.25s ease;
+  animation: pulse-denim-btn 2s infinite;
+  text-decoration: none;
+}
+
+.btn-order-denim:hover {
+  background: linear-gradient(135deg, #172554 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.55);
+  color: #fff;
+}
+
+@keyframes pulse-denim-btn {
+  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+.btn-call-denim {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-call-denim:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.btn-wa-denim {
+  background: #25d366;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-wa-denim:hover {
+  background: #1eb956;
+  color: #fff;
+}
+
+.trust-box {
+  flex: 1 1 22%;
+  padding: 0.35rem;
+}
+
+/* =========================================================================
+   5. Combo Offers Packages
+========================================================================= */
+.jeans-pkg-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.jeans-pkg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.jeans-pkg-card.featured {
+  border: 2px solid var(--indigo-primary) !important;
+  box-shadow: 0 15px 30px rgba(30, 58, 138, 0.15) !important;
+}
+
+.badge-featured-deal {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #dc2626, #ea580c);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.jeans-pkg-card.selected {
+  border-color: var(--indigo-primary) !important;
+  background-color: #eff6ff;
+}
+
+/* Icons */
+.icon-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================================
+   6. 1-Page Checkout Form
+========================================================================= */
+.order-form-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.checkout-denim-card {
+  border: 2px solid var(--indigo-primary);
+}
+
+.package-radio-box {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.package-radio-box:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.package-radio-box.active {
+  background: #eff6ff;
+  border-color: var(--indigo-primary) !important;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.12);
+}
+
+.delivery-radio-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.delivery-radio-card:hover {
+  border-color: #94a3b8;
+}
+
+.delivery-radio-card.active {
+  background: #f0fdf4;
+  border-color: #16a34a !important;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
+}
+
+.btn-confirm-denim {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  border: none;
+  box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+  transition: all 0.25s ease;
+  animation: pulse-confirm 2s infinite;
+}
+
+.btn-confirm-denim:hover {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.55);
+}
+
+@keyframes pulse-confirm {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.denim-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.jeans-success-icon {
+  width: 76px;
+  height: 76px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================================
+   7. Mobile Sticky Bottom Bar
+========================================================================= */
+.mobile-sticky-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 8px 12px;
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.15);
+  z-index: 1030;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-sticky-denim {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.btn-sticky-denim:hover {
+  color: #fff;
+}
+
+/* =========================================================================
+   8. Live Recent Order Toast
+========================================================================= */
+.live-sales-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  z-index: 1025;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 330px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+}
+
+.live-sales-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-img-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f1f5f9;
+}
+
+.toast-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.toast-name { font-size: 0.9rem; }
+.toast-text { font-size: 0.78rem; line-height: 1.2; }
+.toast-time { font-size: 0.72rem; }
+
+/* Responsive */
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 65px;
+  }
+  .live-sales-toast {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .denim-title {
+    font-size: 1.5rem;
+  }
+  .current-price {
+    font-size: 1.85rem;
+  }
+  .checkout-denim-card {
+    padding: 1.25rem !important;
+  }
+}
+

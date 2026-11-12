@@ -1,0 +1,296 @@
+/* =========================================================================
+   BazaarX - Product Details Page Specific Stylesheet
+   Conversion Optimized Gallery, Variant Selectors, Tabs & Sticky Actions
+========================================================================= */
+
+:root {
+  --detail-accent: #2563eb;
+  --detail-red: #ef4444;
+  --detail-gold: #f59e0b;
+}
+
+/* ================= GALLERY & ZOOM ================= */
+.detail-gallery-wrap {
+  position: relative;
+}
+
+.detail-badge-stack {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge-detail-discount {
+  background: var(--detail-red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+}
+
+.badge-detail-stock {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #34d399;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.detail-main-img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-in;
+}
+
+.main-view-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.detail-main-img-box:hover .main-view-img {
+  transform: scale(1.05);
+}
+
+.btn-fullscreen-view {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.btn-fullscreen-view:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.thumbnail-row {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.thumb-item {
+  width: 78px;
+  height: 78px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-item:hover, .thumb-item.active {
+  border-color: var(--detail-accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ================= PRODUCT INFO & VARIANTS ================= */
+.product-detail-title {
+  font-size: 1.75rem;
+  line-height: 1.35;
+}
+
+.detail-price-box {
+  background: #fff1f2;
+  border-color: #fecdd3 !important;
+}
+
+.detail-feature-bullets li {
+  margin-bottom: 0.45rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.detail-feature-bullets li i {
+  margin-top: 4px;
+}
+
+/* Variant Buttons */
+.btn-variant-chip {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.btn-variant-chip:hover {
+  border-color: var(--detail-accent);
+  color: var(--detail-accent);
+}
+
+.btn-variant-chip.active {
+  background: #eff6ff;
+  border-color: var(--detail-accent);
+  color: var(--detail-accent);
+  font-weight: 700;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.btn-package-pill {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.btn-package-pill:hover {
+  border-color: var(--detail-accent);
+}
+
+.btn-package-pill.active {
+  background: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA Buttons */
+.btn-buy-now-pulse {
+  background: linear-gradient(135deg, #e11d48 0%, #ea580c 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+  transition: all 0.25s ease;
+  animation: pulse-buy-btn 2s infinite;
+}
+
+.btn-buy-now-pulse:hover {
+  background: linear-gradient(135deg, #be123c 0%, #c2410c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(225, 29, 72, 0.55);
+  color: #fff;
+}
+
+@keyframes pulse-buy-btn {
+  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.6); }
+  70% { box-shadow: 0 0 0 14px rgba(225, 29, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+.btn-add-cart-detail {
+  background: #ffffff;
+  border: 2px solid var(--detail-accent);
+  color: var(--detail-accent);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-add-cart-detail:hover {
+  background: var(--detail-accent);
+  color: #ffffff;
+}
+
+.btn-whatsapp-detail {
+  background: #25d366;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-whatsapp-detail:hover {
+  background: #1eb956;
+  color: #fff;
+}
+
+/* ================= PRODUCT TABS ================= */
+.custom-detail-tabs .nav-link {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.45rem;
+  margin: 0 4px 6px;
+  transition: all 0.2s ease;
+}
+
+.custom-detail-tabs .nav-link.active, .custom-detail-tabs .nav-link:hover {
+  background: var(--detail-accent);
+  color: #ffffff;
+  border-color: var(--detail-accent);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.w-35 {
+  width: 35%;
+}
+
+/* ================= MOBILE BOTTOM STICKY BAR ================= */
+.mobile-sticky-product-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-detail-title {
+    font-size: 1.35rem;
+  }
+  #detailCurrentPrice {
+    font-size: 1.85rem !important;
+  }
+}
+
