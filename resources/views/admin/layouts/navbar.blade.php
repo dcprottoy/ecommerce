@@ -2,7 +2,7 @@
     <header class="topbar">
       <div class="d-flex align-items-center gap-3">
         <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
-        <div class="topbar-title" id="pageTitle">ড্যাশবোর্ড</div>
+        <div class="topbar-title" id="pageTitle">@yield('page_title', 'ড্যাশবোর্ড')</div>
       </div>
       <div class="topbar-actions">
         <button class="topbar-btn" title="নোটিফিকেশন">

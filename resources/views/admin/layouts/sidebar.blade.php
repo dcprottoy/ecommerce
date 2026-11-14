@@ -14,7 +14,7 @@
     <nav class="sidebar-nav">
       <div class="nav-section-label">মেইন মেনু</div>
 
-      <a href="#" class="nav-item active" onclick="showPage('dashboard',this)">
+      <a href="{{ url('/') }}" class="nav-item {{ request()->is('/') ? 'active' : '' }}" @if(request()->is('/')) onclick="showPage('dashboard',this)" @endif>
         <i class="fas fa-th-large"></i><span>ড্যাশবোর্ড</span>
       </a>
       <a href="#" class="nav-item" onclick="showPage('orders',this)">
@@ -46,8 +46,12 @@
       <a href="#" class="nav-item" onclick="showPage('settings',this)">
         <i class="fas fa-cog"></i><span>সাইট সেটিংস</span>
       </a>
-      <a href="jeans.html" class="nav-item" target="_blank">
+      <a href="{{ route('landingpage.jeans') }}" class="nav-item" target="_blank">
         <i class="fas fa-external-link-alt"></i><span>ল্যান্ডিং পেজ দেখুন</span>
+      </a>
+      <div class="nav-section-label">প্রতিষ্ঠান সেটিংস</div>
+      <a href="{{ route('admin.orgsetup') }}" class="nav-item {{ request()->routeIs('admin.orgsetup*') ? 'active' : '' }}">
+        <i class="fas fa-building"></i><span>প্রতিষ্ঠান সেটাপ</span>
       </a>
     </nav>
 

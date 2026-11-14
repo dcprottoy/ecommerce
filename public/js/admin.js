@@ -6,14 +6,15 @@
 /* ═══ PAGE NAVIGATION ═══ */
 const pageTitles = {
   dashboard: 'ড্যাশবোর্ড',
-  orders:    'অর্ডার ম্যানেজমেন্ট',
-  products:  'প্রোডাক্ট ম্যানেজমেন্ট',
+  orders: 'অর্ডার ম্যানেজমেন্ট',
+  products: 'প্রোডাক্ট ম্যানেজমেন্ট',
   inventory: 'ইনভেন্টরি / স্টক',
   customers: 'কাস্টমার লিস্ট',
-  offers:    'অফার ও কুপন',
-  pixel:     'Facebook Pixel',
-  reports:   'রিপোর্ট ও অ্যানালিটিক্স',
-  settings:  'সাইট সেটিংস',
+  offers: 'অফার ও কুপন',
+  pixel: 'Facebook Pixel',
+  reports: 'রিপোর্ট ও অ্যানালিটিক্স',
+  settings: 'সাইট সেটিংস',
+  'institute-setup': 'প্রতিষ্ঠান সেটাপ',
 };
 
 function showPage(id, el) {
@@ -27,10 +28,12 @@ function showPage(id, el) {
   document.getElementById('pageTitle').textContent = pageTitles[id] || id;
 
   // init page-specific content
-  if (id === 'orders')   initOrdersTable();
+  if (id === 'orders') initOrdersTable();
   if (id === 'products') initProductGrid();
-  if (id === 'reports')  initMonthlyChart();
+  if (id === 'reports') initMonthlyChart();
 }
+
+
 
 /* ═══ SIDEBAR TOGGLE ═══ */
 function toggleSidebar() {
@@ -56,23 +59,23 @@ function showToast(msg, type = 'success') {
    ORDERS TABLE
 ══════════════════════════════════════════════ */
 let allOrders = [
-  { id:'DC-1084', name:'রাহেলা বেগম',    phone:'01811-234501', product:'স্লিম ফিট (কালো, ৩২)',       qty:1, price:1850, date:'আজ',       status:'পেন্ডিং' },
-  { id:'DC-1083', name:'তানভীর আহমেদ',   phone:'01711-234567', product:'রেগুলার ফিট কম্বো (৩ পিস)', qty:3, price:6500, date:'আজ',       status:'শিপমেন্টে' },
-  { id:'DC-1082', name:'সাবরিনা ইসলাম',   phone:'01611-567890', product:'স্ট্রেচেবল স্কিনি (নেভি, ২৮)',qty:1, price:1850, date:'গতকাল',  status:'ডেলিভারড' },
-  { id:'DC-1081', name:'মাহমুদুল হাসান',  phone:'01912-456789', product:'ব্লু ডেনিম রেগুলার (৩৪)',   qty:1, price:1650, date:'গতকাল',  status:'ডেলিভারড' },
-  { id:'DC-1080', name:'নাসরিন আক্তার',   phone:'01516-789012', product:'কম্বো অফার ৩ পিস + বেল্ট',  qty:3, price:6500, date:'২ দিন আগে',status:'ক্যান্সেলড' },
-  { id:'DC-1079', name:'রিফাত হোসেন',    phone:'01611-890123', product:'স্লিম ফিট (ব্লু, ৩০)',       qty:1, price:1850, date:'২ দিন আগে',status:'ডেলিভারড' },
-  { id:'DC-1078', name:'আফিয়া তাসনিম',   phone:'01711-901234', product:'রেগুলার ফিট (গ্রে, ৩২)',     qty:2, price:3700, date:'৩ দিন আগে',status:'শিপমেন্টে' },
-  { id:'DC-1077', name:'সাইফুল ইসলাম',   phone:'01811-012345', product:'কম্বো ৩ পিস',               qty:3, price:6500, date:'৩ দিন আগে',status:'ডেলিভারড' },
-  { id:'DC-1076', name:'শাহনাজ পারভিন',  phone:'01912-123456', product:'স্কিনি ফিট (কালো, ২৮)',     qty:1, price:1850, date:'৪ দিন আগে',status:'পেন্ডিং' },
-  { id:'DC-1075', name:'জাহিদুল হক',     phone:'01516-234567', product:'রেগুলার ফিট (নেভি, ৩৬)',    qty:1, price:1650, date:'৪ দিন আগে',status:'ডেলিভারড' },
+  { id: 'DC-1084', name: 'রাহেলা বেগম', phone: '01811-234501', product: 'স্লিম ফিট (কালো, ৩২)', qty: 1, price: 1850, date: 'আজ', status: 'পেন্ডিং' },
+  { id: 'DC-1083', name: 'তানভীর আহমেদ', phone: '01711-234567', product: 'রেগুলার ফিট কম্বো (৩ পিস)', qty: 3, price: 6500, date: 'আজ', status: 'শিপমেন্টে' },
+  { id: 'DC-1082', name: 'সাবরিনা ইসলাম', phone: '01611-567890', product: 'স্ট্রেচেবল স্কিনি (নেভি, ২৮)', qty: 1, price: 1850, date: 'গতকাল', status: 'ডেলিভারড' },
+  { id: 'DC-1081', name: 'মাহমুদুল হাসান', phone: '01912-456789', product: 'ব্লু ডেনিম রেগুলার (৩৪)', qty: 1, price: 1650, date: 'গতকাল', status: 'ডেলিভারড' },
+  { id: 'DC-1080', name: 'নাসরিন আক্তার', phone: '01516-789012', product: 'কম্বো অফার ৩ পিস + বেল্ট', qty: 3, price: 6500, date: '২ দিন আগে', status: 'ক্যান্সেলড' },
+  { id: 'DC-1079', name: 'রিফাত হোসেন', phone: '01611-890123', product: 'স্লিম ফিট (ব্লু, ৩০)', qty: 1, price: 1850, date: '২ দিন আগে', status: 'ডেলিভারড' },
+  { id: 'DC-1078', name: 'আফিয়া তাসনিম', phone: '01711-901234', product: 'রেগুলার ফিট (গ্রে, ৩২)', qty: 2, price: 3700, date: '৩ দিন আগে', status: 'শিপমেন্টে' },
+  { id: 'DC-1077', name: 'সাইফুল ইসলাম', phone: '01811-012345', product: 'কম্বো ৩ পিস', qty: 3, price: 6500, date: '৩ দিন আগে', status: 'ডেলিভারড' },
+  { id: 'DC-1076', name: 'শাহনাজ পারভিন', phone: '01912-123456', product: 'স্কিনি ফিট (কালো, ২৮)', qty: 1, price: 1850, date: '৪ দিন আগে', status: 'পেন্ডিং' },
+  { id: 'DC-1075', name: 'জাহিদুল হক', phone: '01516-234567', product: 'রেগুলার ফিট (নেভি, ৩৬)', qty: 1, price: 1650, date: '৪ দিন আগে', status: 'ডেলিভারড' },
 ];
 
-let filteredOrders   = [...allOrders];
-let currentPage      = 1;
-const ordersPerPage  = 6;
+let filteredOrders = [...allOrders];
+let currentPage = 1;
+const ordersPerPage = 6;
 let activeStatusFilter = '';
-let activeSearch       = '';
+let activeSearch = '';
 
 function initOrdersTable() {
   applyOrderFilters();
@@ -123,7 +126,7 @@ function renderOrdersTable() {
   }
 
   tbody.innerHTML = pageData.map(o => {
-    const initials = o.name.substring(0,2);
+    const initials = o.name.substring(0, 2);
     const sc = o.status === 'পেন্ডিং' ? 'pending' : o.status === 'শিপমেন্টে' ? 'shipped' : o.status === 'ডেলিভারড' ? 'delivered' : 'cancelled';
     return `
       <tr>
@@ -152,11 +155,11 @@ function renderPagination() {
   const totalPages = Math.ceil(filteredOrders.length / ordersPerPage);
   if (totalPages <= 1) { wrap.innerHTML = ''; return; }
 
-  let html = `<button onclick="goPage(${currentPage - 1})" ${currentPage===1?'disabled':''}>‹</button>`;
+  let html = `<button onclick="goPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
   for (let i = 1; i <= totalPages; i++) {
-    html += `<button class="${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+    html += `<button class="${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</button>`;
   }
-  html += `<button onclick="goPage(${currentPage + 1})" ${currentPage===totalPages?'disabled':''}>›</button>`;
+  html += `<button onclick="goPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
   wrap.innerHTML = html;
 }
 
@@ -176,19 +179,19 @@ function viewOrder(id) {
   const o = allOrders.find(x => x.id === id);
   if (!o) return;
   document.getElementById('modalOrderTitle').textContent = `অর্ডার #${o.id}`;
-  document.getElementById('oName').value    = o.name;
-  document.getElementById('oPhone').value   = o.phone;
+  document.getElementById('oName').value = o.name;
+  document.getElementById('oPhone').value = o.phone;
   document.getElementById('oAddress').value = '';
-  document.getElementById('oQty').value     = o.qty;
-  document.getElementById('oPrice').value   = o.price;
-  document.getElementById('oStatus').value  = o.status;
+  document.getElementById('oQty').value = o.qty;
+  document.getElementById('oPrice').value = o.price;
+  document.getElementById('oStatus').value = o.status;
   new bootstrap.Modal(document.getElementById('orderModal')).show();
 }
 
 function openOrderModal() {
   document.getElementById('modalOrderTitle').textContent = 'নতুন অর্ডার';
-  ['oName','oPhone','oAddress','oNote'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('oQty').value   = 1;
+  ['oName', 'oPhone', 'oAddress', 'oNote'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('oQty').value = 1;
   document.getElementById('oPrice').value = '';
   new bootstrap.Modal(document.getElementById('orderModal')).show();
 }
@@ -225,20 +228,20 @@ function deleteOrder(id) {
    PRODUCTS GRID
 ══════════════════════════════════════════════ */
 let allProducts = [
-  { id:1, name:'৪-ওয়ে স্ট্রেচ কম্বো (৩ পিস)', sku:'DC-C001', mrp:9000, price:6500, stock:85, sold:132, status:'সক্রিয়' },
-  { id:2, name:'স্লিম ফিট ব্লু ডেনিম জিন্স',    sku:'DC-S001', mrp:2500, price:1850, stock:62, sold:87,  status:'সক্রিয়' },
-  { id:3, name:'রেগুলার ফিট কালো জিন্স',        sku:'DC-R001', mrp:2200, price:1650, stock:48, sold:64,  status:'সক্রিয়' },
-  { id:4, name:'স্কিনি ফিট নেভি ব্লু জিন্স',    sku:'DC-SK01', mrp:2500, price:1850, stock:5,  sold:38,  status:'লো স্টক' },
-  { id:5, name:'রেগুলার ফিট গ্রে জিন্স',        sku:'DC-R002', mrp:2200, price:1650, stock:34, sold:29,  status:'সক্রিয়' },
-  { id:6, name:'স্লিম ফিট কালো জিন্স (প্রিমিয়াম)',sku:'DC-S002',mrp:3000, price:2250, stock:0,  sold:21,  status:'আউট অফ স্টক' },
+  { id: 1, name: '৪-ওয়ে স্ট্রেচ কম্বো (৩ পিস)', sku: 'DC-C001', mrp: 9000, price: 6500, stock: 85, sold: 132, status: 'সক্রিয়' },
+  { id: 2, name: 'স্লিম ফিট ব্লু ডেনিম জিন্স', sku: 'DC-S001', mrp: 2500, price: 1850, stock: 62, sold: 87, status: 'সক্রিয়' },
+  { id: 3, name: 'রেগুলার ফিট কালো জিন্স', sku: 'DC-R001', mrp: 2200, price: 1650, stock: 48, sold: 64, status: 'সক্রিয়' },
+  { id: 4, name: 'স্কিনি ফিট নেভি ব্লু জিন্স', sku: 'DC-SK01', mrp: 2500, price: 1850, stock: 5, sold: 38, status: 'লো স্টক' },
+  { id: 5, name: 'রেগুলার ফিট গ্রে জিন্স', sku: 'DC-R002', mrp: 2200, price: 1650, stock: 34, sold: 29, status: 'সক্রিয়' },
+  { id: 6, name: 'স্লিম ফিট কালো জিন্স (প্রিমিয়াম)', sku: 'DC-S002', mrp: 3000, price: 2250, stock: 0, sold: 21, status: 'আউট অফ স্টক' },
 ];
 
 function initProductGrid() {
   const grid = document.getElementById('productGrid');
   if (!grid) return;
   grid.innerHTML = allProducts.map(p => {
-    const sc  = p.status === 'সক্রিয়' ? 'delivered' : p.status === 'লো স্টক' ? 'pending' : 'cancelled';
-    const disc= Math.round((1 - p.price / p.mrp) * 100);
+    const sc = p.status === 'সক্রিয়' ? 'delivered' : p.status === 'লো স্টক' ? 'pending' : 'cancelled';
+    const disc = Math.round((1 - p.price / p.mrp) * 100);
     return `
       <div class="col-xl-4 col-md-6">
         <div class="prod-admin-card">
@@ -276,7 +279,7 @@ function initProductGrid() {
 
 function openProductModal() {
   document.getElementById('productModalTitle').textContent = 'নতুন প্রোডাক্ট';
-  ['pName','pSku','pMrp','pPrice','pStock','pDesc','pImg'].forEach(id => document.getElementById(id).value = '');
+  ['pName', 'pSku', 'pMrp', 'pPrice', 'pStock', 'pDesc', 'pImg'].forEach(id => document.getElementById(id).value = '');
   new bootstrap.Modal(document.getElementById('productModal')).show();
 }
 
@@ -284,9 +287,9 @@ function editProduct(id) {
   const p = allProducts.find(x => x.id === id);
   if (!p) return;
   document.getElementById('productModalTitle').textContent = 'প্রোডাক্ট এডিট করুন';
-  document.getElementById('pName').value  = p.name;
-  document.getElementById('pSku').value   = p.sku;
-  document.getElementById('pMrp').value   = p.mrp;
+  document.getElementById('pName').value = p.name;
+  document.getElementById('pSku').value = p.sku;
+  document.getElementById('pMrp').value = p.mrp;
   document.getElementById('pPrice').value = p.price;
   document.getElementById('pStock').value = p.stock;
   new bootstrap.Modal(document.getElementById('productModal')).show();
@@ -328,7 +331,7 @@ function initDashboardCharts() {
   salesChartInst = new Chart(sc, {
     type: 'bar',
     data: {
-      labels: ['রবি','সোম','মঙ্গল','বুধ','বৃহ','শুক্র','শনি'],
+      labels: ['রবি', 'সোম', 'মঙ্গল', 'বুধ', 'বৃহ', 'শুক্র', 'শনি'],
       datasets: [
         {
           label: 'অর্ডার',
@@ -370,10 +373,10 @@ function initDashboardCharts() {
   statusChartInst = new Chart(dc, {
     type: 'doughnut',
     data: {
-      labels: ['ডেলিভারড','শিপমেন্টে','পেন্ডিং','ক্যান্সেলড'],
+      labels: ['ডেলিভারড', 'শিপমেন্টে', 'পেন্ডিং', 'ক্যান্সেলড'],
       datasets: [{
         data: [183, 78, 47, 20],
-        backgroundColor: ['#10b981','#1a56db','#f59e0b','#ef4444'],
+        backgroundColor: ['#10b981', '#1a56db', '#f59e0b', '#ef4444'],
         borderWidth: 0,
         hoverOffset: 6,
       }]
@@ -393,7 +396,7 @@ function initMonthlyChart() {
   monthlyChartInst = new Chart(mc, {
     type: 'bar',
     data: {
-      labels: ['জান','ফেব','মার','এপ্রি','মে','জুন','জুলাই','আগ','সেপ','অক্টো','নভে','ডিসে'],
+      labels: ['জান', 'ফেব', 'মার', 'এপ্রি', 'মে', 'জুন', 'জুলাই', 'আগ', 'সেপ', 'অক্টো', 'নভে', 'ডিসে'],
       datasets: [
         {
           label: 'অর্ডার সংখ্যা',
@@ -433,7 +436,7 @@ function initMonthlyChart() {
   sizeChartInst = new Chart(szc, {
     type: 'polarArea',
     data: {
-      labels: ['২৮','৩০','৩২','৩৪','৩৬','৩৮'],
+      labels: ['২৮', '৩০', '৩২', '৩৪', '৩৬', '৩৮'],
       datasets: [{
         data: [42, 68, 95, 78, 32, 13],
         backgroundColor: [
@@ -464,7 +467,7 @@ function logoutAdmin() {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Show logged-in user info
-  const role  = sessionStorage.getItem('admin_role')  || 'Admin';
+  const role = sessionStorage.getItem('admin_role') || 'Admin';
   const email = sessionStorage.getItem('admin_email') || '';
   const nameEl = document.querySelector('.admin-name');
   const roleEl = document.querySelector('.admin-role');
@@ -481,9 +484,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     const sb = document.getElementById('sidebar');
     if (window.innerWidth <= 991 &&
-        sb.classList.contains('mobile-open') &&
-        !sb.contains(e.target) &&
-        !e.target.closest('.sidebar-toggle')) {
+      sb.classList.contains('mobile-open') &&
+      !sb.contains(e.target) &&
+      !e.target.closest('.sidebar-toggle')) {
       sb.classList.remove('mobile-open');
     }
   });

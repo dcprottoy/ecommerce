@@ -1,0 +1,1079 @@
+@include('landingpage.layouts.header')
+<body>
+
+  <!-- Top Urgent Scarcity Header -->
+  <div class="denim-top-bar sticky-top">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between py-2">
+      <div class="top-announcement-text font-bn d-flex align-items-center gap-2">
+        <span class="badge badge-flash-sale">
+          <i class="fas fa-bolt me-1"></i> ধামাকা অফার
+        </span>
+        <span>৩ পিস কম্বো নিলেই <strong>সারা দেশে ফ্রি হোম ডেলিভারি + ১টি লেদার বেল্ট ফ্রি!</strong></span>
+      </div>
+
+      <!-- Live Dynamic Countdown -->
+      <div class="denim-timer d-flex align-items-center gap-1 font-bn">
+        <span class="small text-white-50 me-1 d-none d-sm-inline">অফারের সময় বাকি:</span>
+        <div class="timer-unit"><span id="timerHours">05</span><small>ঘণ্টা</small></div>
+        <span class="colon">:</span>
+        <div class="timer-unit"><span id="timerMinutes">42</span><small>মিনিট</small></div>
+        <span class="colon">:</span>
+        <div class="timer-unit"><span id="timerSeconds">19</span><small>সেকেন্ড</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand Navigation & Customer Helpline -->
+  <nav class="denim-navbar py-2 bg-white border-bottom">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="#" class="brand-brand text-decoration-none d-flex align-items-center gap-2">
+        <div class="denim-logo-icon">
+          <i class="fas fa-vest-patches"></i>
+        </div>
+        <div>
+          <span class="denim-brand-name">DENIM<span class="text-indigo">CRAFT</span></span>
+          <span class="denim-tagline">100% EXPORT COMFORT WEAR</span>
+        </div>
+      </a>
+
+      <div class="d-flex align-items-center gap-2">
+        <a href="tel:01700000000" class="btn btn-denim-phone btn-sm font-bn">
+          <i class="fas fa-phone-alt me-1 text-primary"></i> 
+          <span class="d-none d-md-inline">কল করুন:</span> 01700-000000
+        </a>
+        <a href="https://wa.me/8801700000000?text=আসসালামু%20আলাইকুম,%20জিন্স%20প্যান্টের%20অফার%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="btn btn-denim-wa btn-sm font-bn">
+          <i class="fab fa-whatsapp me-1"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Hero Product Presentation Section -->
+  <main class="denim-hero py-4 py-md-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        
+        <!-- Left: Product Showcase & Interactive Color Switcher -->
+        <div class="col-lg-6">
+          <div class="denim-gallery-card">
+            
+            <!-- Badges -->
+            <div class="denim-badges-stack">
+              <span class="badge-denim-sale font-bn">৪০% মেগা ছাড়</span>
+              <span class="badge-denim-export font-bn"><i class="fas fa-medal me-1"></i>১০০% এক্সপোর্ট কোয়ালিটি</span>
+            </div>
+
+            <!-- Main Big Active Image -->
+            <div class="denim-main-img-box">
+              <img id="jeansMainImg" src="https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80" alt="Premium Stretchable Jeans Pant" class="img-fluid rounded-4 shadow-sm main-photo-transition">
+            </div>
+
+            <!-- Color Swatches & Thumbnail Switcher -->
+            <div class="denim-color-selector mt-3 p-3 bg-light rounded-3 border font-bn">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="fw-bold text-dark small">
+                  <i class="fas fa-droplet text-primary me-1"></i> কালার পরিবর্তন করে ছবি দেখুন:
+                </span>
+                <span class="badge bg-dark" id="currentColorLabel">ডিপ ইন্ডিগো ব্লু (Deep Blue)</span>
+              </div>
+
+              <div class="d-flex gap-2 thumbnail-strip">
+                <!-- Color 1: Deep Blue -->
+                <div class="color-thumb active" data-color="ডিপ ইন্ডিগো ব্লু" onclick="selectJeansColor('https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80', 'ডিপ ইন্ডিগো ব্লু', this)">
+                  <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=160&auto=format&fit=crop&q=80" alt="Deep Indigo Blue">
+                  <span class="color-name">ডিপ ব্লু</span>
+                </div>
+
+                <!-- Color 2: Jet Black -->
+                <div class="color-thumb" data-color="জেট ব্ল্যাক" onclick="selectJeansColor('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&auto=format&fit=crop&q=80', 'জেট ব্ল্যাক', this)">
+                  <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=160&auto=format&fit=crop&q=80" alt="Jet Black">
+                  <span class="color-name">জেট ব্ল্যাক</span>
+                </div>
+
+                <!-- Color 3: Light Blue Wash -->
+                <div class="color-thumb" data-color="লাইট স্কাই ব্লু" onclick="selectJeansColor('https://images.unsplash.com/photo-1604176354204-9268737828e4?w=800&auto=format&fit=crop&q=80', 'লাইট স্কাই ব্লু', this)">
+                  <img src="https://images.unsplash.com/photo-1604176354204-9268737828e4?w=160&auto=format&fit=crop&q=80" alt="Light Sky Blue">
+                  <span class="color-name">স্কাই ব্লু</span>
+                </div>
+
+                <!-- Color 4: Charcoal Grey -->
+                <div class="color-thumb" data-color="চারকোল গ্রে" onclick="selectJeansColor('https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=800&auto=format&fit=crop&q=80', 'চারকোল গ্রে', this)">
+                  <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=160&auto=format&fit=crop&q=80" alt="Charcoal Grey">
+                  <span class="color-name">চারকোল গ্রে</span>
+                </div>
+
+                <!-- Detail Shot: Stretch Test -->
+                <div class="color-thumb" data-color="৪-ওয়ে স্ট্রেচ ফ্যাব্রিক" onclick="selectJeansColor('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&auto=format&fit=crop&q=80', 'ফেব্রিক ও সেলাই ফিনিশিং', this)">
+                  <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=160&auto=format&fit=crop&q=80" alt="Fabric close-up">
+                  <span class="color-name">ক্লোজ-আপ</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Size Chart Trigger Card -->
+            <div class="mt-3 p-3 bg-white border rounded-3 d-flex align-items-center justify-content-between font-bn">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-ruler-combined text-primary fs-4"></i>
+                <div>
+                  <h6 class="mb-0 fw-bold text-dark">সঠিক সাইজ বুঝতে পারছেন না?</h6>
+                  <small class="text-muted">আমাদের সঠিক ইঞ্চি সাইজ চার্ট দেখে নিন</small>
+                </div>
+              </div>
+              <button type="button" class="btn btn-outline-dark btn-sm px-3" data-bs-toggle="modal" data-bs-target="#sizeChartModal">
+                সাইজ চার্ট দেখুন
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Value Proposition, Size Picker, Price & Call To Action -->
+        <div class="col-lg-6">
+          <div class="denim-info-box">
+            
+            <!-- Rating & Verified Orders -->
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-2 font-bn">
+              <div class="text-warning rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="fw-bold text-dark">৪.৯/৫</span>
+              <span class="text-muted small">(২,৩৫০+ ভেরিফাইড রিভিউ)</span>
+              <span class="badge bg-indigo-subtle text-indigo border border-indigo-subtle ms-auto">
+                <i class="fas fa-check-double me-1"></i>৪-ওয়ে স্ট্রেচ
+              </span>
+            </div>
+
+            <!-- Main Product Title -->
+            <h1 class="denim-title font-bn mb-2">
+              প্রিমিয়াম এক্সপোর্ট কোয়ালিটি <br>
+              <span class="text-indigo-gradient">৪-ওয়ে সুপার স্ট্রেচেবল ডেনিম জিন্স</span>
+            </h1>
+
+            <p class="denim-subtitle font-bn text-muted">
+              ১০০% প্রিমিয়াম কটন ও লাইক্রা ব্লেন্ডেড ডেনিম ফেব্রিক। পরলে মনে হবে যেন শরীরের সাথে মিশে আছে—বসা, ওঠা বা বাইক ড্রাইভ করায় কোনো টান পড়বে না। <strong>কালার ১০০% পাকা ও স্থায়ী ওয়াশ গ্যারান্টি!</strong>
+            </p>
+
+            <!-- Price & Scarcity Box -->
+            <div class="denim-price-box p-3 rounded-4 mb-4 font-bn">
+              <div class="d-flex align-items-baseline gap-3 mb-1">
+                <span class="current-price text-indigo fw-extrabold" id="heroPriceDisplay">৳ ৯৯০</span>
+                <span class="regular-price text-muted text-decoration-line-through fs-5">৳ ১,৬৫০</span>
+                <span class="save-tag bg-danger text-white px-2 py-1 rounded small fw-bold">৳ ৬৬০ ছাড়!</span>
+              </div>
+              
+              <!-- Limited stock progress -->
+              <div class="stock-bar-area mt-2">
+                <div class="d-flex justify-content-between small text-muted mb-1">
+                  <span><i class="fas fa-fire text-danger me-1"></i>বর্তমান স্টক দ্রুত শেষ হচ্ছে:</span>
+                  <span class="fw-bold text-danger">আর মাত্র ২৩টি প্যান্ট অবশিষ্ট আছে</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 78%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Waist Size Selector Pills -->
+            <div class="waist-size-selector-area mb-4 font-bn">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <label class="fw-bold text-dark mb-0">
+                  <i class="fas fa-expand text-primary me-1"></i> আপনার কোমরের সাইজ নির্বাচন করুন (ইঞ্চি):
+                </label>
+                <a href="#size-chart-section" class="small text-primary text-decoration-none fw-semibold">
+                  <i class="fas fa-table-list me-1"></i> সাইজ চার্ট
+                </a>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 size-pills-row">
+                <button type="button" class="btn btn-size-pill" onclick="selectQuickSize('28', this)">২৮</button>
+                <button type="button" class="btn btn-size-pill active" onclick="selectQuickSize('30', this)">৩০</button>
+                <button type="button" class="btn btn-size-pill" onclick="selectQuickSize('32', this)">৩২</button>
+                <button type="button" class="btn btn-size-pill" onclick="selectQuickSize('34', this)">৩৪</button>
+                <button type="button" class="btn btn-size-pill" onclick="selectQuickSize('36', this)">৩৬</button>
+                <button type="button" class="btn btn-size-pill" onclick="selectQuickSize('38', this)">৩৮</button>
+                <button type="button" class="btn btn-size-pill" onclick="selectQuickSize('40', this)">৪০</button>
+              </div>
+            </div>
+
+            <!-- 4 Core Product USPs -->
+            <div class="row g-2 mb-4 font-bn">
+              <div class="col-sm-6">
+                <div class="denim-usp-chip d-flex align-items-center gap-2">
+                  <i class="fas fa-arrows-up-down-left-right text-primary"></i>
+                  <span><strong>৪-ওয়ে লাইক্রা স্ট্রেচ:</strong> অবিশ্বাস্য আরামদায়ক</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="denim-usp-chip d-flex align-items-center gap-2">
+                  <i class="fas fa-shield-halved text-success"></i>
+                  <span><strong>১০০% কালার গ্যারান্টি:</strong> ওয়াশে ফেড হবে না</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="denim-usp-chip d-flex align-items-center gap-2">
+                  <i class="fas fa-vest text-warning"></i>
+                  <span><strong>১২.৫ আউন্স ডেনিম:</strong> হেভি ও টেকসই</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="denim-usp-chip d-flex align-items-center gap-2">
+                  <i class="fas fa-repeat text-info"></i>
+                  <span><strong>ফ্রি সাইজ এক্সচেঞ্জ:</strong> না মিললে তাৎক্ষণিক বদল</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Group (Action Buttons) -->
+            <div class="action-btn-stack d-flex flex-column gap-2 font-bn">
+              <a href="#order-form-section" class="btn btn-order-denim btn-lg w-100 py-3 text-center text-white fw-bold d-flex align-items-center justify-content-center gap-2">
+                <i class="fas fa-cart-shopping fs-5"></i>
+                <span class="fs-5">অর্ডার করতে নিচের ফর্মটি পূরণ করুন</span>
+                <i class="fas fa-arrow-down"></i>
+              </a>
+
+              <div class="d-flex gap-2">
+                <a href="tel:01700000000" class="btn btn-call-denim btn-lg flex-fill py-2 text-center font-bn">
+                  <i class="fas fa-phone-alt me-1"></i> কল করে অর্ডার দিন
+                </a>
+                <a href="https://wa.me/8801700000000?text=Hello,%20I%20want%20to%20order%20the%20Denim%20Jeans%20Pants." target="_blank" class="btn btn-wa-denim btn-lg flex-fill py-2 text-center font-bn">
+                  <i class="fab fa-whatsapp me-1"></i> হোয়াটসঅ্যাপে কথা বলুন
+                </a>
+              </div>
+            </div>
+
+            <!-- Risk Reversal Badges (BD Market Trust) -->
+            <div class="denim-trust-seals mt-4 pt-3 border-top d-flex flex-wrap justify-content-between text-center font-bn text-muted small">
+              <div class="trust-box">
+                <i class="fas fa-hand-holding-dollar fs-5 text-success d-block mb-1"></i>
+                <span>ক্যাশ অন ডেলিভারি</span>
+              </div>
+              <div class="trust-box">
+                <i class="fas fa-shirt fs-5 text-primary d-block mb-1"></i>
+                <span>পড়ে দেখে পেমেন্ট</span>
+              </div>
+              <div class="trust-box">
+                <i class="fas fa-arrows-rotate fs-5 text-warning d-block mb-1"></i>
+                <span>৭ দিনে ফ্রি এক্সচেঞ্জ</span>
+              </div>
+              <div class="trust-box">
+                <i class="fas fa-truck-fast fs-5 text-danger d-block mb-1"></i>
+                <span>সারা দেশে হোম ডেলিভারি</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Special Combo Multi-Buy Offers (The Facebook Ads Multiplier) -->
+  <section class="combo-offers-section py-5 bg-light" id="packages">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5 font-bn">
+        <span class="badge bg-indigo text-white px-3 py-2 rounded-pill fw-bold mb-2">
+          <i class="fas fa-tags me-1"></i> স্পেশাল কম্বো অফার
+        </span>
+        <h2 class="fw-extrabold text-dark">যে প্যাকেজে আপনার লাভ সবচেয়ে বেশি সেটি বেছে নিন</h2>
+        <p class="text-muted">প্যাকেজ নির্বাচন করলে নিচে থাকা অর্ডার ফর্মে স্বয়ংক্রিয়ভাবে ডিসকাউন্ট সেট হয়ে যাবে।</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        
+        <!-- Package 1: Single Pant -->
+        <div class="col-md-4">
+          <div class="jeans-pkg-card h-100 p-4 rounded-4 bg-white border text-center d-flex flex-column" data-package="pkg1" data-price="990" onclick="chooseJeansBundle('pkg1', 990)">
+            <div class="mb-3 font-bn">
+              <h4 class="fw-bold text-dark">১ পিস সিঙ্গেল ট্রায়াল</h4>
+              <p class="text-muted small">যেকোনো ১টি পছন্দের কালার</p>
+              <div class="pkg-price-text my-2">
+                <span class="display-6 fw-bold text-dark">৳ ৯৯০</span>
+                <span class="text-muted text-decoration-line-through fs-6 ms-1">৳ ১,৬৫০</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark">ডেলিভারি চার্জ প্রযোজ্য</span>
+            </div>
+
+            <ul class="list-unstyled font-bn text-start my-auto small text-muted">
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>১টি প্রিমিয়াম ডেনিম জিন্স প্যান্ট</li>
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>পছন্দের যেকোনো ১টি কালার ও সাইজ</li>
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>১০০% কালার গ্যারান্টি</li>
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>৭ দিনের ফ্রি এক্সচেঞ্জ সুবিধা</li>
+              <li class="py-1 text-muted opacity-50"><i class="fas fa-times me-2"></i>ফ্রি লেদার বেল্ট নেই</li>
+            </ul>
+
+            <button class="btn btn-outline-primary w-100 font-bn mt-3 py-2">
+              এই প্যাকেজটি নিন
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 2: 2-Piece Saver Combo (Most Popular) -->
+        <div class="col-md-4">
+          <div class="jeans-pkg-card featured h-100 p-4 rounded-4 bg-white border-2 border-primary text-center d-flex flex-column position-relative shadow" data-package="pkg2" data-price="1790" onclick="chooseJeansBundle('pkg2', 1790)">
+            <div class="badge-featured-deal font-bn">🔥 সবচেয়ে বেশি বিক্রিত কম্বো</div>
+            
+            <div class="mb-3 font-bn mt-2">
+              <h4 class="fw-bold text-indigo">২ পিস মেগা সেভার কম্বো</h4>
+              <p class="text-muted small">যেকোনো ২টি কালার ও সাইজ বেছে নিন</p>
+              <div class="pkg-price-text my-2">
+                <span class="display-6 fw-extrabold text-danger">৳ ১,৭৯০</span>
+                <span class="text-muted text-decoration-line-through fs-6 ms-1">৳ ৩,৩০০</span>
+              </div>
+              <span class="badge bg-success text-white">প্রতি পিস মাত্র ৳ ৮৯৫!</span>
+            </div>
+
+            <ul class="list-unstyled font-bn text-start my-auto small text-dark">
+              <li class="py-1"><i class="fas fa-check-circle text-success me-2"></i><strong>২টি প্রিমিয়াম ডেনিম জিন্স প্যান্ট</strong></li>
+              <li class="py-1"><i class="fas fa-check-circle text-success me-2"></i>যেকোনো ২টি ভিন্ন কালার পছন্দের সুযোগ</li>
+              <li class="py-1"><i class="fas fa-check-circle text-success me-2"></i>প্রয়োজনে ২টি আলাদা সাইজও নিতে পারবেন</li>
+              <li class="py-1"><i class="fas fa-check-circle text-success me-2"></i>৪-ওয়ে আরামদায়ক লাইক্রা স্ট্রেচ</li>
+              <li class="py-1"><i class="fas fa-check-circle text-success me-2"></i>ডেলিভারিম্যানের সামনে দেখে নেওয়ার সুযোগ</li>
+            </ul>
+
+            <button class="btn btn-primary w-100 font-bn mt-3 py-2 fw-bold">
+              <i class="fas fa-fire me-1"></i> এই কম্বোটি সিলেক্ট করুন
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 3: 3-Piece Ultimate Combo + Free Leather Belt -->
+        <div class="col-md-4">
+          <div class="jeans-pkg-card h-100 p-4 rounded-4 bg-white border text-center d-flex flex-column" data-package="pkg3" data-price="2490" onclick="chooseJeansBundle('pkg3', 2490)">
+            <div class="mb-3 font-bn">
+              <h4 class="fw-bold text-dark">৩ পিস আল্টিমেট কম্বো</h4>
+              <p class="text-muted small">৩টি সেরা কালার + লেদার বেল্ট উপহার!</p>
+              <div class="pkg-price-text my-2">
+                <span class="display-6 fw-bold text-dark">৳ ২,৪৯০</span>
+                <span class="text-muted text-decoration-line-through fs-6 ms-1">৳ ৪,৯৫০</span>
+              </div>
+              <span class="badge bg-danger text-white">সারা দেশে ডেলিভারি সম্পূর্ণ ফ্রি!</span>
+            </div>
+
+            <ul class="list-unstyled font-bn text-start my-auto small text-muted">
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>৩টি প্রিমিয়াম ডেনিম প্যান্ট (প্রতি পিস ৳ ৮৩০)</li>
+              <li class="py-1"><i class="fas fa-gift text-danger me-2"></i><strong>১টি প্রিমিয়াম লেদার বেল্ট সম্পূর্ণ ফ্রি গিফট!</strong></li>
+              <li class="py-1"><i class="fas fa-truck text-success me-2"></i><strong>সারা দেশে হোম ডেলিভারি ফ্রি (৳০)</strong></li>
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>ভিন্ন কালার ও সাইজ কম্বিনেশন সম্ভব</li>
+              <li class="py-1"><i class="fas fa-check text-success me-2"></i>ভিআইপি প্রায়োরিটি কাস্টমার সাপোর্ট</li>
+            </ul>
+
+            <button class="btn btn-outline-primary w-100 font-bn mt-3 py-2">
+              এই প্যাকেজটি নিন
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Fabric & Quality Highlights (Pain Point Killer) -->
+  <section class="fabric-quality-section py-5 bg-white">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5 font-bn">
+        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-2">
+          <i class="fas fa-gem me-1"></i> কোয়ালিটি ও মেটেরিয়াল
+        </span>
+        <h2 class="fw-extrabold text-dark">যেসব কারণে আমাদের ডেনিম জিন্স প্যান্ট প্রিমিয়াম</h2>
+        <p class="text-muted">সাধারণ জিন্সের মতো শক্ত বা খসখসে নয়, এটি নরম, মসৃণ এবং দীর্ঘস্থায়ী।</p>
+      </div>
+
+      <div class="row g-4 font-bn">
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-light border text-center h-100">
+            <div class="icon-circle bg-primary-subtle text-primary mx-auto mb-3">
+              <i class="fas fa-arrows-spin fs-4"></i>
+            </div>
+            <h5 class="fw-bold text-dark">৪-ওয়ে সুপার স্ট্রেচেবল</h5>
+            <p class="text-muted small mb-0">
+              উচ্চমানের লাইক্রা ব্যবহারের কারণে আপনি যেভাবে বসুন না কেন, জিন্সটি শরীরের মাপ অনুযায়ী অনায়াসে প্রসারিত হয়।
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-light border text-center h-100">
+            <div class="icon-circle bg-success-subtle text-success mx-auto mb-3">
+              <i class="fas fa-tint-slash fs-4"></i>
+            </div>
+            <h5 class="fw-bold text-dark">১০০% কালার গ্যারান্টি</h5>
+            <p class="text-muted small mb-0">
+              বায়ো-এনজাইম ওয়াশ করা, যার ফলে সাবান দিয়ে ধোয়ার পরও কোনো কালার উঠবে না বা প্যান্টের রঙ ফিকে হবে না।
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-light border text-center h-100">
+            <div class="icon-circle bg-warning-subtle text-warning mx-auto mb-3">
+              <i class="fas fa-lock fs-4"></i>
+            </div>
+            <h5 class="fw-bold text-dark">হেভি ডিউটি ব্রাস জিপার</h5>
+            <p class="text-muted small mb-0">
+              অরিজিনাল অটো-লকিং ব্রাস মেটাল জিপার এবং অ্যান্টি-রাস্ট মেটাল রিভেট বাটন, যা কখনোই আটকে যাবে না বা ভেঙে যাবে না।
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-light border text-center h-100">
+            <div class="icon-circle bg-danger-subtle text-danger mx-auto mb-3">
+              <i class="fas fa-box fs-4"></i>
+            </div>
+            <h5 class="fw-bold text-dark">স্মার্ট ডিপ পকেট ডিজাইন</h5>
+            <p class="text-muted small mb-0">
+              পকেটগুলো পর্যাপ্ত গভীর, যাতে আপনার যেকোনো বড় সাইজের স্মার্টফোন, মানিব্যাগ ও চাবি অনায়াসে সুরক্ষিত থাকে।
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Size Chart Section (Crucial to eliminate return/exchange anxiety) -->
+  <section class="size-chart-section py-5 bg-light" id="size-chart-section">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5 font-bn">
+        <span class="badge bg-secondary-subtle text-dark px-3 py-2 rounded-pill fw-bold mb-2">
+          <i class="fas fa-ruler me-1"></i> সঠিক পরিমাপ গাইড
+        </span>
+        <h2 class="fw-extrabold text-dark">আমাদের সাইজ চার্ট (ইঞ্চি অনুযায়ী)</h2>
+        <p class="text-muted">অর্ডার করার পূর্বে আপনার সঠিক কোমরের মাপ মিলিয়ে নিন। মাপ নিয়ে কোনো দ্বিধা থাকলে আমাদের প্রতিনিধি কল করে কনফার্ম করবেন।</p>
+      </div>
+
+      <div class="table-responsive font-bn shadow-sm rounded-4 border bg-white max-w-900 mx-auto">
+        <table class="table table-bordered table-hover align-middle mb-0 text-center">
+          <thead class="table-dark">
+            <tr>
+              <th class="py-3">সাইজ (ইঞ্চি)</th>
+              <th class="py-3">কোমর (Waist)</th>
+              <th class="py-3">লম্বা (Length)</th>
+              <th class="py-3">থাই (Thigh)</th>
+              <th class="py-3">বটম / মোহরী (Bottom)</th>
+              <th class="py-3">ফিটিং টাইপ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold text-indigo">২৮</td>
+              <td>২৮"</td>
+              <td>৩৮" - ৩৯"</td>
+              <td>২১"</td>
+              <td>১১.৫"</td>
+              <td><span class="badge bg-primary-subtle text-primary">স্লিম ফিট</span></td>
+            </tr>
+            <tr class="table-active">
+              <td class="fw-bold text-indigo">৩০</td>
+              <td>৩০"</td>
+              <td>৩৯" - ৪০"</td>
+              <td>২২"</td>
+              <td>১২"</td>
+              <td><span class="badge bg-primary-subtle text-primary">স্লিম ফিট</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-indigo">৩২</td>
+              <td>৩২"</td>
+              <td>৪০"</td>
+              <td>২৩"</td>
+              <td>১২.৫"</td>
+              <td><span class="badge bg-primary-subtle text-primary">কমফোর্ট স্লিম</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-indigo">৩৪</td>
+              <td>৩৪"</td>
+              <td>৪০" - ৪১"</td>
+              <td>২৪"</td>
+              <td>১৩"</td>
+              <td><span class="badge bg-primary-subtle text-primary">কমফোর্ট স্লিম</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-indigo">৩৬</td>
+              <td>৩৬"</td>
+              <td>৪১"</td>
+              <td>২৫"</td>
+              <td>১৩.৫"</td>
+              <td><span class="badge bg-primary-subtle text-primary">রেগুলার কমফোর্ট</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-indigo">৩৮</td>
+              <td>৩৮"</td>
+              <td>৪১" - ৪২"</td>
+              <td>২৬"</td>
+              <td>১৪"</td>
+              <td><span class="badge bg-primary-subtle text-primary">রেগুলার কমফোর্ট</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-indigo">৪০</td>
+              <td>৪০"</td>
+              <td>৪২"</td>
+              <td>২৭"</td>
+              <td>১৪.৫"</td>
+              <td><span class="badge bg-primary-subtle text-primary">রেগুলার কমফোর্ট</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-center mt-3 font-bn text-muted small">
+        <i class="fas fa-info-circle text-primary me-1"></i> নোট: ৪-ওয়ে স্ট্রেচেবল ফ্যাব্রিক হওয়ার কারণে কোমর প্রয়োজনমতো ১-১.৫ ইঞ্চি পর্যন্ত সহজেই এডজাস্ট হয়।
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- HIGH-CONVERTING 1-PAGE BANGLADESHI CHECKOUT FORM (Denim Edition) -->
+  <!-- ========================================================================= -->
+  <section class="order-form-section py-5" id="order-form-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+          
+          <div class="checkout-denim-card p-4 p-md-5 rounded-4 shadow-lg border-2 border-indigo bg-white">
+            
+            <!-- Header Badge -->
+            <div class="text-center mb-4 font-bn">
+              <span class="badge bg-indigo text-white px-3 py-1 rounded-pill small fw-bold mb-2">
+                <i class="fas fa-truck-fast me-1"></i> ক্যাশ অন ডেলিভারি - পণ্য হাতে পেয়ে টাকা পরিশোধ করুন!
+              </span>
+              <h2 class="fw-extrabold text-dark">অর্ডার করতে নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন</h2>
+              <p class="text-muted small">
+                অর্ডার সাবমিট করলে আমাদের সেলস টিম আপনার সাথে কথা বলে সাইজ নিশ্চিত করে পার্সেল বুকিং করবেন।
+              </p>
+            </div>
+
+            <form id="jeansOrderForm" class="font-bn" novalidate>
+              
+              <!-- Step 1: Package Selection -->
+              <div class="form-title-tag mb-3 text-dark fw-bold border-bottom pb-2">
+                <i class="fas fa-layer-group text-indigo me-1"></i> ১. আপনার প্যাকেজটি নির্বাচন করুন:
+              </div>
+
+              <div class="d-flex flex-column gap-2 mb-4">
+                
+                <!-- Package 1 Radio -->
+                <label class="package-radio-box p-3 rounded-3 border d-flex align-items-center justify-content-between" for="jPkg1">
+                  <div class="d-flex align-items-center gap-3">
+                    <input type="radio" class="form-check-input mt-0" name="jeansPackage" id="jPkg1" value="pkg1" data-price="990">
+                    <div>
+                      <div class="fw-bold text-dark">১ পিস ট্রায়াল প্যাক</div>
+                      <small class="text-muted">রেগুলার অফার</small>
+                    </div>
+                  </div>
+                  <span class="fs-5 fw-bold text-indigo">৳ ৯৯০</span>
+                </label>
+
+                <!-- Package 2 Radio (Checked by default) -->
+                <label class="package-radio-box active p-3 rounded-3 border-2 border-indigo d-flex align-items-center justify-content-between" for="jPkg2">
+                  <div class="d-flex align-items-center gap-3">
+                    <input type="radio" class="form-check-input mt-0" name="jeansPackage" id="jPkg2" value="pkg2" data-price="1790" checked>
+                    <div>
+                      <div class="fw-bold text-dark">
+                        ২ পিস মেগা সেভার কম্বো
+                        <span class="badge bg-danger text-white ms-1 small">বেস্ট সেলার 🔥</span>
+                      </div>
+                      <small class="text-muted">সবচেয়ে বেশি বিক্রিত প্যাকেজ</small>
+                    </div>
+                  </div>
+                  <span class="fs-5 fw-bold text-indigo">৳ ১,৭৯০</span>
+                </label>
+
+                <!-- Package 3 Radio -->
+                <label class="package-radio-box p-3 rounded-3 border d-flex align-items-center justify-content-between" for="jPkg3">
+                  <div class="d-flex align-items-center gap-3">
+                    <input type="radio" class="form-check-input mt-0" name="jeansPackage" id="jPkg3" value="pkg3" data-price="2490">
+                    <div>
+                      <div class="fw-bold text-dark">
+                        ৩ পিস আল্টিমেট কম্বো (৩টি কালার + লেদার বেল্ট ফ্রি)
+                        <span class="badge bg-success text-white ms-1 small">ফ্রি ডেলিভারি 🚚</span>
+                      </div>
+                      <small class="text-muted">সারা দেশে ডেলিভারি ফ্রি + ফ্রি উপহার</small>
+                    </div>
+                  </div>
+                  <span class="fs-5 fw-bold text-indigo">৳ ২,৪৯০</span>
+                </label>
+
+              </div>
+
+              <!-- Step 2: Size & Color Preference -->
+              <div class="form-title-tag mb-3 text-dark fw-bold border-bottom pb-2">
+                <i class="fas fa-palette text-indigo me-1"></i> ২. সাইজ ও কালার নির্বাচন করুন:
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label text-dark fw-semibold" for="selectedWaist">কোমরের সাইজ (ইঞ্চি) <span class="text-danger">*</span></label>
+                  <select class="form-select form-select-lg fs-6" id="selectedWaist" required>
+                    <option value="" disabled>সাইজ নির্বাচন করুন...</option>
+                    <option value="২৮">২৮ ইঞ্চি কোমর (Slim Fit)</option>
+                    <option value="৩০" selected>৩০ ইঞ্চি কোমর (Slim Fit - Most Common)</option>
+                    <option value="৩২">৩২ ইঞ্চি কোমর (Comfort Slim)</option>
+                    <option value="৩৪">৩৪ ইঞ্চি কোমর (Comfort Slim)</option>
+                    <option value="৩৬">৩৬ ইঞ্চি কোমর (Regular Fit)</option>
+                    <option value="৩৮">৩৮ ইঞ্চি কোমর (Regular Fit)</option>
+                    <option value="৪০">৪০ ইঞ্চি কোমর (Regular Fit)</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label text-dark fw-semibold" for="selectedColor">পছন্দের কালার <span class="text-danger">*</span></label>
+                  <select class="form-select form-select-lg fs-6" id="selectedColor" required>
+                    <option value="ডিপ ইন্ডিগো ব্লু (Deep Blue)" selected>ডিপ ইন্ডিগো ব্লু (Deep Blue)</option>
+                    <option value="জেট ব্ল্যাক (Jet Black)">জেট ব্ল্যাক (Jet Black)</option>
+                    <option value="লাইট স্কাই ব্লু (Light Sky Wash)">লাইট স্কাই ব্লু (Light Sky Wash)</option>
+                    <option value="চারকোল গ্রে (Charcoal Grey)">চারকোল গ্রে (Charcoal Grey)</option>
+                    <option value="কম্বো: ব্ল্যাক + ডিপ ব্লু">কম্বো: ব্ল্যাক + ডিপ ব্লু</option>
+                    <option value="কম্বো: ব্ল্যাক + স্কাই ব্লু">কম্বো: ব্ল্যাক + স্কাই ব্লু</option>
+                    <option value="কম্বো: ৩টি ভিন্ন কালার">কম্বো: ৩টি ভিন্ন কালার (৩ পিস প্যাকের জন্য)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Step 3: Customer Information -->
+              <div class="form-title-tag mb-3 text-dark fw-bold border-bottom pb-2">
+                <i class="fas fa-user-check text-indigo me-1"></i> ৩. আপনার ডেলিভারি ঠিকানা দিন:
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <label for="jName" class="form-label text-dark fw-semibold">আপনার পুরো নাম <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-lg fs-6" id="jName" placeholder="যেমন: রাকিবুল ইসলাম" required>
+                  <div class="invalid-feedback">অনুগ্রহ করে আপনার নাম লিখুন।</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="jPhone" class="form-label text-dark fw-semibold">
+                    সচল মোবাইল নম্বর <span class="text-danger">*</span>
+                    <small class="text-muted fw-normal">(ডেলিভারির সময় এই নম্বরে কল যাবে)</small>
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light fw-bold font-monospace text-muted">+88</span>
+                    <input type="tel" class="form-control form-control-lg fs-6 font-monospace" id="jPhone" placeholder="01XXXXXXXXX" maxlength="11" required>
+                    <span class="input-group-text bg-white" id="jPhoneIcon"><i class="fas fa-phone text-muted"></i></span>
+                  </div>
+                  <div class="invalid-feedback" id="jPhoneFeedback">সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন (যেমন: 01712345678)</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="jAddress" class="form-label text-dark fw-semibold">
+                    সম্পূর্ণ ঠিকানা <span class="text-danger">*</span>
+                    <small class="text-muted fw-normal">(গ্রাম/মহল্লা, রোড নং, থানা ও জেলা)</small>
+                  </label>
+                  <textarea class="form-control" id="jAddress" rows="3" placeholder="যেমন: বাড়ি নং ১৪, রোড ৫, মিরপুর ১২, ঢাকা" required></textarea>
+                  <div class="invalid-feedback">অনুগ্রহ করে আপনার বিস্তারিত ডেলিভারি ঠিকানা দিন।</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="jNotes" class="form-label text-dark fw-semibold small text-muted">
+                    বিশেষ কোনো নির্দেশনা বা সাইজ কম্বিনেশন নোট (ঐচ্ছিক):
+                  </label>
+                  <input type="text" class="form-control" id="jNotes" placeholder="যেমন: ২টি প্যান্টের সাইজ আলাদা দিতে চাইলে এখানে লিখুন">
+                </div>
+              </div>
+
+              <!-- Step 4: Delivery Area Selection -->
+              <div class="form-title-tag mb-3 text-dark fw-bold border-bottom pb-2">
+                <i class="fas fa-location-dot text-indigo me-1"></i> ৪. ডেলিভারি এলাকা নির্বাচন করুন:
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                <label class="delivery-radio-card p-3 rounded-3 border flex-fill active" for="jDelivInside">
+                  <div class="form-check mb-0">
+                    <input class="form-check-input" type="radio" name="jeansDelivery" id="jDelivInside" value="70" checked>
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <div>
+                        <strong>ঢাকার ভিতরে</strong>
+                        <div class="small text-muted">হোম ডেলিভারি (২৪-৪৮ ঘণ্টা)</div>
+                      </div>
+                      <span class="fw-bold text-dark fs-5">৳ ৭০</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="delivery-radio-card p-3 rounded-3 border flex-fill" for="jDelivOutside">
+                  <div class="form-check mb-0">
+                    <input class="form-check-input" type="radio" name="jeansDelivery" id="jDelivOutside" value="130">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <div>
+                        <strong>ঢাকার বাইরে</strong>
+                        <div class="small text-muted">সারা দেশে হোম ডেলিভারি (২-৩ দিন)</div>
+                      </div>
+                      <span class="fw-bold text-dark fs-5">৳ ১৩০</span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Dynamic Order Summary -->
+              <div class="p-3 p-md-4 rounded-4 bg-light border mb-4">
+                <h5 class="fw-bold text-dark mb-3 border-bottom pb-2">
+                  <i class="fas fa-receipt text-primary me-2"></i>অর্ডার সারাংশ (Order Summary)
+                </h5>
+
+                <div class="d-flex justify-content-between mb-2 small">
+                  <span class="text-muted" id="jSummaryPkgName">২ পিস মেগা সেভার কম্বো:</span>
+                  <span class="fw-bold text-dark" id="jSummarySubtotal">৳ ১,৭৯০</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2 small">
+                  <span class="text-muted" id="jSummaryDeliveryTitle">ডেলিভারি চার্জ (ঢাকার ভিতরে):</span>
+                  <span class="fw-bold text-dark" id="jSummaryDeliveryCharge">৳ ৭০</span>
+                </div>
+
+                <div class="border-top pt-2 mt-2 d-flex justify-content-between align-items-center">
+                  <span class="fs-5 fw-bold text-dark">সর্বমোট প্রদেয় টাকা:</span>
+                  <span class="fs-3 fw-extrabold text-indigo" id="jSummaryTotal">৳ ১,৮৬০</span>
+                </div>
+
+                <div class="text-muted small mt-2 d-flex align-items-center gap-1">
+                  <i class="fas fa-shield-halved text-success"></i>
+                  <span>পণ্য হাতে পেয়ে দেখে ডেলিভারিম্যানকে এই টাকা পরিশোধ করবেন।</span>
+                </div>
+              </div>
+
+              <!-- Big Pulse Order Submit Button -->
+              <div class="text-center">
+                <button type="submit" id="jSubmitBtn" class="btn btn-confirm-denim w-100 py-3 text-white fw-extrabold fs-4 rounded-3 shadow">
+                  <i class="fas fa-check-circle me-2"></i> অর্ডার কনফার্ম করুন (৳ <span id="jBtnTotal">১,৮৬০</span>)
+                </button>
+                <div class="small text-muted mt-2">
+                  <i class="fas fa-lock text-success me-1"></i> সম্পূর্ণ ক্যাশ অন ডেলিভারি, কোনো অগ্রিম পেমেন্টের প্রয়োজন নেই।
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Bangladeshi Customer Reviews -->
+  <section class="reviews-section py-5 bg-light" id="reviews">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5 font-bn">
+        <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-2">
+          <i class="fas fa-star me-1"></i> কাস্টমার অভিজ্ঞতা
+        </span>
+        <h2 class="fw-extrabold text-dark">আমাদের ডেনিম প্যান্ট পরে ক্রেতারা কী বলছেন</h2>
+        <p class="text-muted">সারা দেশ থেকে আসা আমাদের সম্মানিত গ্রাহকদের বাস্তব রিভিউ:</p>
+      </div>
+
+      <div class="row g-4 font-bn">
+        <!-- Review 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-white border h-100 d-flex flex-column shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="text-warning small">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <span class="badge bg-success-subtle text-success small"><i class="fas fa-check me-1"></i>ভেরিফাইড অর্ডার</span>
+            </div>
+            <p class="text-muted small mb-3">
+              "আমি ২ পিসের কম্বো নিয়েছিলাম—একটি ব্ল্যাক আর একটি ডিপ ব্লু। সাধারণত অনলাইন থেকে প্যান্ট কিনলে সাইজে ঝামেলা হয়, কিন্তু এটার ফিটিং এক কথায় অসাধারণ! কাপড়টা সত্যিই অনেক নরম ও স্ট্রেচ করে।"
+            </p>
+            <div class="mt-auto d-flex align-items-center gap-3 pt-2 border-top">
+              <div class="denim-avatar bg-primary text-white">আ</div>
+              <div>
+                <h6 class="mb-0 fw-bold text-dark">আসিফ মাহমুদ</h6>
+                <small class="text-muted">উত্তরা, ঢাকা • ৪ দিন আগে</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-white border h-100 d-flex flex-column shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="text-warning small">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <span class="badge bg-success-subtle text-success small"><i class="fas fa-check me-1"></i>ভেরিফাইড অর্ডার</span>
+            </div>
+            <p class="text-muted small mb-3">
+              "৩ পিসের কম্বো নিয়েছি সাথে ফ্রি লেদার বেল্টটাও পেয়েছি। বেল্টের কোয়ালিটিও প্রিমিয়াম। বাইক রাইড করার সময় কোনো টান পড়ে না, অনেক কমফোর্টেবল। কালার ওয়াশ করার পরেও একই রকম আছে।"
+            </p>
+            <div class="mt-auto d-flex align-items-center gap-3 pt-2 border-top">
+              <div class="denim-avatar bg-indigo text-white">ম</div>
+              <div>
+                <h6 class="mb-0 fw-bold text-dark">মাহমুদুল হাসান</h6>
+                <small class="text-muted">আগ্রাবাদ, চট্টগ্রাম • ৫ দিন আগে</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-white border h-100 d-flex flex-column shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="text-warning small">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <span class="badge bg-success-subtle text-success small"><i class="fas fa-check me-1"></i>ভেরিফাইড অর্ডার</span>
+            </div>
+            <p class="text-muted small mb-3">
+              "আমি প্রথমে সাইজ ৩২ নিয়েছিলাম, একটু লুজ লাগায় ওনাদের হোয়াটসঅ্যাপে জানাতেই কোনো বাড়তি চার্জ ছাড়াই সাইজ ৩০ এক্সচেঞ্জ করে দিয়েছে। এই সার্ভিস সত্যিই প্রশংসনীয়!"
+            </p>
+            <div class="mt-auto d-flex align-items-center gap-3 pt-2 border-top">
+              <div class="denim-avatar bg-dark text-white">জ</div>
+              <div>
+                <h6 class="mb-0 fw-bold text-dark">জুবায়ের বিন খালিদ</h6>
+                <small class="text-muted">বগুড়া সদর • ১ সপ্তাহ আগে</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (সচরাচর জিজ্ঞাসিত প্রশ্ন) -->
+  <section class="faq-section py-5 bg-white" id="faq">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5 font-bn">
+        <span class="badge bg-secondary-subtle text-dark px-3 py-2 rounded-pill fw-bold mb-2">
+          <i class="fas fa-circle-question me-1"></i> সাধারণ প্রশ্নোত্তর
+        </span>
+        <h2 class="fw-extrabold text-dark">আপনার মনের সব প্রশ্নের পরিষ্কার উত্তর</h2>
+        <p class="text-muted">জিন্স প্যান্ট ক্রয় সম্পর্কিত গুরুত্বপূর্ণ তথ্যসমূহ:</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion custom-faq-accordion font-bn" id="jeansFaqAccordion">
+            
+            <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#jFaq1">
+                  সাইজ যদি ছোট বা বড় হয়, তবে কি পরিবর্তন করা যাবে?
+                </button>
+              </h2>
+              <div id="jFaq1" class="accordion-collapse collapse show" data-bs-parent="#jeansFaqAccordion">
+                <div class="accordion-body text-muted">
+                  জি, অবশ্যই! পণ্য হাতে পাওয়ার ৭ দিনের মধ্যে যদি সাইজে কোনো সমস্যা হয়, আমাদের হেল্পলাইন বা হোয়াটসঅ্যাপে যোগাযোগ করলে আমরা সাথে সাথে সাইজ পরিবর্তন (Exchange) করে দেব।
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#jFaq2">
+                  ধোয়ার পর কাপড় কি ছোট হয়ে যাবে বা কালার উঠবে?
+                </button>
+              </h2>
+              <div id="jFaq2" class="accordion-collapse collapse" data-bs-parent="#jeansFaqAccordion">
+                <div class="accordion-body text-muted">
+                  একদমই না। আমাদের প্রতিটি প্যান্ট প্রি-ওয়াশড ও প্রি-শ্রিঙ্কড (Pre-shrunk) বায়ো-এনজাইম ওয়াশ করা থাকে। তাই সাবান বা ওয়াশিং মেশিনে ধোয়ার পরও কাপড়ের মাপ বদলাবে না বা কালার উঠবে না।
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item mb-3 rounded-3 overflow-hidden border">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#jFaq3">
+                  ডেলিভারিম্যানের সামনে চেক করে কি টাকা দিতে পারব?
+                </button>
+              </h2>
+              <div id="jFaq3" class="accordion-collapse collapse" data-bs-parent="#jeansFaqAccordion">
+                <div class="accordion-body text-muted">
+                  হ্যাঁ! পার্সেল হাতে পাওয়ার পর আপনি ডেলিভারিম্যানের সামনে প্যাকেট খুলে কাপড়ের কোয়ালিটি ও ফিনিশিং চেক করে সম্পূর্ণ ক্যাশ অন ডেলিভারিতে টাকা পরিশোধ করবেন।
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item rounded-3 overflow-hidden border">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#jFaq4">
+                  ২ বা ৩ পিসের কম্বোতে কি ভিন্ন সাইজ নেওয়া যাবে?
+                </button>
+              </h2>
+              <div id="jFaq4" class="accordion-collapse collapse" data-bs-parent="#jeansFaqAccordion">
+                <div class="accordion-body text-muted">
+                  জি, নেওয়া যাবে। আপনি যদি ভাই বা বন্ধুর সাথে শেয়ার করে নিতে চান, তবে অর্ডার ফর্মের নোট বক্সে অথবা আমাদের প্রতিনিধি যখন কনফার্মেশন কল করবেন তখন ভিন্ন সাইজ বলে দিলেই হবে।
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Footer -->
+  <footer class="py-4 bg-white border-top font-bn">
+    <div class="container text-center text-muted small">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3">
+        <a href="#order-form-section" class="text-muted text-decoration-none">অর্ডার ফর্ম</a>
+        <span>•</span>
+        <a href="#size-chart-section" class="text-muted text-decoration-none">সাইজ চার্ট</a>
+        <span>•</span>
+        <a href="#packages" class="text-muted text-decoration-none">কম্বো অফার</a>
+        <span>•</span>
+        <a href="#reviews" class="text-muted text-decoration-none">কাস্টমার রিভিউ</a>
+        <span>•</span>
+        <a href="tel:01700000000" class="text-muted text-decoration-none">হেল্পলাইন: 01700-000000</a>
+      </div>
+
+      <p class="mb-1">
+        &copy; ২০২৬ DenimCraft BD. সর্বস্বত্ব সংরক্ষিত। প্রিমিয়াম এক্সপোর্ট কমফোর্ট ডেনিম।
+      </p>
+      <p class="text-muted opacity-75 mb-0" style="font-size: 0.75rem;">
+        Disclaimer: This site is not a part of the Facebook website or Meta Inc.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MOBILE STICKY FLOATING BOTTOM BAR -->
+  <!-- ========================================================================= -->
+  <div class="mobile-sticky-bottom-bar d-lg-none">
+    <div class="container-fluid px-2">
+      <div class="d-flex align-items-center justify-content-between gap-2">
+        <div class="sticky-price-info font-bn">
+          <div class="text-indigo fw-extrabold fs-5 lh-1" id="mobileStickyPrice">৳ ১,৭৯০</div>
+          <small class="text-muted font-bn" style="font-size: 0.72rem;">২ পিস মেগা কম্বো</small>
+        </div>
+        <div class="d-flex gap-1 flex-grow-1">
+          <a href="tel:01700000000" class="btn btn-sm btn-outline-secondary d-flex align-items-center justify-content-center px-2" title="কল করুন">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+          <a href="#order-form-section" class="btn btn-sticky-denim flex-grow-1 font-bn fw-bold text-white py-2 d-flex align-items-center justify-content-center gap-1">
+            <i class="fas fa-cart-shopping"></i>
+            <span>অর্ডার করুন</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Recent Order Toast Notification -->
+  <div class="live-sales-toast shadow" id="jeansOrderToast">
+    <div class="toast-img-box">
+      <img src="https://images.unsplash.com/photo-1542272604-780c96856592?w=100&auto=format&fit=crop&q=80" alt="Jeans purchased">
+    </div>
+    <div class="toast-info font-bn">
+      <div class="toast-name fw-bold text-dark" id="jToastName">সাব্বির আহমেদ</div>
+      <div class="toast-text small text-muted" id="jToastDetail">২ পিস মেগা সেভার কম্বো অর্ডার করেছেন</div>
+      <div class="toast-time small text-success" id="jToastTime">
+        <i class="fas fa-check-circle me-1"></i>মিরপুর, ঢাকা • ৩ মিনিট আগে
+      </div>
+    </div>
+  </div>
+
+  <!-- Size Chart Modal -->
+  <div class="modal fade" id="sizeChartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden font-bn">
+        <div class="modal-header bg-dark text-white py-3">
+          <h5 class="modal-title fw-bold">
+            <i class="fas fa-ruler-combined me-2 text-warning"></i> ডেনিম প্যান্টের বিস্তারিত সাইজ চার্ট (ইঞ্চি)
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="table-responsive">
+            <table class="table table-bordered text-center align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>সাইজ</th>
+                  <th>কোমর (Waist)</th>
+                  <th>লম্বা (Length)</th>
+                  <th>থাই (Thigh)</th>
+                  <th>বটম (Bottom)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>২৮</td><td>২৮"</td><td>৩৮" - ৩৯"</td><td>২১"</td><td>১১.৫"</td></tr>
+                <tr class="table-primary"><td>৩০</td><td>৩০"</td><td>৩৯" - ৪০"</td><td>২২"</td><td>১২"</td></tr>
+                <tr><td>৩২</td><td>৩২"</td><td>৪০"</td><td>২৩"</td><td>১২.৫"</td></tr>
+                <tr><td>৩৪</td><td>৩৪"</td><td>৪০" - ৪১"</td><td>২৪"</td><td>১৩"</td></tr>
+                <tr><td>৩৬</td><td>৩৬"</td><td>৪১"</td><td>২৫"</td><td>১৩.৫"</td></tr>
+                <tr><td>৩৮</td><td>৩৮"</td><td>৪১" - ৪২"</td><td>২৬"</td><td>১৪"</td></tr>
+                <tr><td>৪০</td><td>৪০"</td><td>৪২"</td><td>২৭"</td><td>১৪.৫"</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="alert alert-info border-0 small mt-3 mb-0">
+            <i class="fas fa-lightbulb me-1"></i> সাধারণত আপনি যে সাইজের প্যান্ট পরেন ঠিক সেই সাইজেই অর্ডার করুন। ৪-ওয়ে লাইক্রা স্ট্রেচ হওয়ায় বডি ফিটিং খুব সুন্দর হবে।
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Success Modal with Digital Receipt & WhatsApp Confirmation -->
+  <div class="modal fade" id="jeansSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden font-bn">
+        <div class="modal-header bg-success text-white py-3">
+          <h5 class="modal-title fw-bold">
+            <i class="fas fa-circle-check me-1"></i> আলহামদুলিল্লাহ! আপনার অর্ডারটি নিশ্চিত হয়েছে 🎉
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <div class="jeans-success-icon mx-auto mb-3">
+            <i class="fas fa-bag-shopping text-success fs-1"></i>
+          </div>
+
+          <h4 class="fw-bold text-dark mb-1">ধন্যবাদ <span id="jInvoiceName" class="text-primary"></span>!</h4>
+          <p class="text-muted small mb-3">
+            আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। খুব দ্রুত আমাদের সেলস প্রতিনিধি আপনার নম্বরে কল দিয়ে সাইজ ও ডেলিভারি নিশ্চিত করবেন।
+          </p>
+
+          <div class="p-3 rounded-3 bg-light border text-start mb-3 small">
+            <div class="d-flex justify-content-between border-bottom pb-1 mb-2">
+              <span class="text-muted">ইনভয়েস আইডি:</span>
+              <strong class="font-monospace text-danger" id="jInvoiceId">DENIM-72819</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">প্যাকেজ:</span>
+              <span class="fw-bold" id="jInvoicePkg">২ পিস মেগা কম্বো</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">কোমরের সাইজ:</span>
+              <span class="fw-bold text-primary" id="jInvoiceWaist">৩০ ইঞ্চি</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">কালার:</span>
+              <span class="fw-bold" id="jInvoiceColor">ডিপ ইন্ডিগো ব্লু</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">মোবাইল:</span>
+              <span class="font-monospace" id="jInvoicePhone">017XXXXXXXX</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">ঠিকানা:</span>
+              <span class="text-truncate" style="max-width: 180px;" id="jInvoiceAddress">ঢাকা</span>
+            </div>
+            <div class="d-flex justify-content-between border-top pt-2 mt-2 fs-6">
+              <span class="fw-bold text-dark">মোট ক্যাশ অন ডেলিভারি:</span>
+              <span class="fw-bold text-indigo fs-5" id="jInvoiceTotal">৳ ১,৮৬০</span>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2">
+            <a href="#" id="jWaConfirmBtn" target="_blank" class="btn btn-wa-denim py-2 fw-bold text-white d-flex align-items-center justify-content-center gap-2">
+              <i class="fab fa-whatsapp fs-5"></i> হোয়াটসঅ্যাপে অর্ডার নিশ্চিত করুন
+            </a>
+            <button type="button" class="btn btn-outline-secondary py-2" data-bs-dismiss="modal">
+              ঠিক আছে, পেজে থাকুন
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{asset('js/jeans.js')}}"></script>
+</body>
+</html>
+
